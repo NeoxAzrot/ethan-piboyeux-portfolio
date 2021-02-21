@@ -1,1 +1,57 @@
 @import 'styles/variables'
+
+// Pour les polices
+@font-face
+ font-family: 'Agenda'
+ src: url("./fonts/AgendaLight.otf") format("opentype")
+ font-weight: 300
+
+@font-face
+ font-family: 'Agenda'
+ src: url("./fonts/AgendaRegular.ttf") format("truetype")
+ font-weight: 400
+
+@font-face
+ font-family: 'Agenda'
+ src: url("./fonts/AgendaMedium.ttf") format("truetype")
+ font-weight: 500
+
+@font-face
+ font-family: 'Agenda'
+ src: url("./fonts/AgendaBold.ttf") format("truetype")
+ font-weight: 700
+
+@font-face
+ font-family: 'TheNightWatch'
+ src: url("./fonts/TheNightWatch.ttf") format("truetype")
+ font-weight: 400
+
+// Pour toutes les pages
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 62.5%
+
+body
+  background: $accent-color
+  min-width: 100vw
+  min-height: 100vh
+  font-family: $main-font
+  font-size: 1.6rem
+  overflow-x: hidden
+
+a
+  color: $primary-color
+  text-decoration: none
+
+// Pour changer la sélection des éléments
+*::selection
+  background: $primary-color
+  color: $accent-color
+
+// Pour le layout uniquement
+.container
+  padding: 45px
