@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className={styles.container}>
-
+      <p>contact (@) ethanpiboyeux.fr</p>
       </div>
     </Layout>
   )

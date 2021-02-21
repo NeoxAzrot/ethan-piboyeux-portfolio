@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Layout>
       <div className={styles.container}>
-
+     
       </div>
     </Layout>
   )
