@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className={styles.container}>
-      <p>contact (@) ethanpiboyeux.fr</p>
+        <a href="mailto:contact (@) ethanpiboyeux.fr">contact (@) ethanpiboyeux.fr</a>
       </div>
     </Layout>
   )
