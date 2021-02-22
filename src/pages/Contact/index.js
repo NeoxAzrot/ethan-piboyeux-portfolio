@@ -12,7 +12,7 @@ const Contact = () => {
         <a href="mailto:contact@ethanpiboyeux.fr" className={styles.contact__link}>contact (@) ethanpiboyeux.fr</a>
       </div>
       <Footer allProjectsDisplay={false}/>
-    </Layout>
+    </Layout>   
   )
 }
 
