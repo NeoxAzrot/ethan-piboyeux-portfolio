@@ -1,1 +1,48 @@
 @import 'styles/variables'
+
+.container
+    width: 100%
+    .right
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        .introduction
+            align-items: center 
+            display:flex
+            flex-direction: row
+            justify-content: flex-end
+            width: 70%
+
+            p
+                font-family: $main-font
+                font-size: 3rem
+                font-weight: 500
+                color: $primary-color
+
+                .service
+                    font-family: $main-font
+                    font-size: 1.8rem
+                    font-weight: 500
+                    color: $primary-color
+                    align-items: center 
+                    display:flex
+                    .bg
+                        display: inline-block
+                        background-size: 20px
+                        font-style: 1rem
+                        height: 1px
+                        width: 40px
+                        align-items: center 
+                        background-color: $primary-color
+    .button
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin: 15px
+        
+        .contact
+            font-family: $main-font
+            font-size: 3rem
+            font-weight: 300
+            color: $primary-color
