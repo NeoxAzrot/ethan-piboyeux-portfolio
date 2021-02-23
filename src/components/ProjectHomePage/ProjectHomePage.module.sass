@@ -1,0 +1,101 @@
+@import 'styles/variables'
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .project__item
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 70%
+    display: none
+    &.active
+      display: block
+
+    .project__title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      .project__link
+        font-size: 10rem
+        font-weight: 400
+        font-family: $accent-font
+      
+      .index__project
+        font-size: 2.2rem
+        font-weight: 400
+        font-family: $accent-font
+        position: absolute
+        left: calc(50% + 1rem)
+        display: flex
+        justify-content: center
+        align-items: center
+
+        span
+          display: block
+          width: 15rem
+          height: .3rem
+          background: $primary-color
+          margin: 0 2rem
+
+    .item__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .left__container
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-basis: 50%
+
+        img
+          width: 40rem
+          height: auto
+          object-fit: cover
+
+        .services__container
+          transform: rotate(90deg)
+          margin-top: 4rem
+          margin-right: 1rem
+
+          .project__services
+            font-size: 2.2rem
+            font-weight: 700
+            font-family: $main-font
+          
+          .project__year
+            font-size: 1.8rem
+            font-weight: 500
+            font-family: $main-font
+            margin-top: .4rem
+      
+      .right__container
+        display: flex
+        align-items: flex-start
+        justify-content: flex-end
+        flex-basis: 50%
+        
+        .container__number_of_projects
+          display: flex
+          align-items: center
+          justify-content: center
+          transform: rotate(90deg)
+          font-size: 2rem
+          font-weight: 500
+          font-family: $main-font
+          position: absolute
+          top: 0
+          right: 0
+
+          span
+            display: block
+            width: 2rem
+            height: .3rem
+            background: $primary-color
+            margin: 0 1rem

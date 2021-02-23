@@ -4,10 +4,12 @@ import Service from 'components/Service'
 import ArrowLink from 'icons/ArrowLink'
 import { NavLink } from 'react-router-dom'
 import styles from './Services.module.sass'
+import Header from 'components/Header'
 
 const Services = () => {
   return (
     <Layout>
+      <Header url='/services'/>
       <div className={styles.container}>
         <div className={styles.right}>
           <div className={styles.introduction}>

@@ -38,10 +38,11 @@ html
 body
   background: $accent-color
   min-width: 100vw
-  min-height: 100vh
+  min-height: calc(100vh - 45px * 2)
   font-family: $main-font
   font-size: 1.6rem
   overflow-x: hidden
+  color: $primary-color
 
 a
   color: $primary-color
@@ -55,3 +56,5 @@ a
 // Pour le layout uniquement
 .container
   padding: 45px
+  position: relative
+  min-height: 100vh

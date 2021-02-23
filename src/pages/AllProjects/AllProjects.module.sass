@@ -1,1 +1,35 @@
 @import 'styles/variables'
+
+.container
+  margin: auto
+  margin-top: 10rem
+  margin-bottom: 12rem
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 80%
+
+  .container__filter
+    width: 100%
+
+    ul
+      list-style-type: none
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+
+      li
+        margin-right: 6rem
+        cursor: pointer
+        font-size: 1.8rem
+        font-weight: 500
+        font-family: $main-font
+        opacity: .5
+        &.active
+          opacity: 1
+        &::last-child
+          margin-right: 0
+  
+  .cover

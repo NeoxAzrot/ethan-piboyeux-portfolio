@@ -2,17 +2,18 @@ import React, { useState } from "react"
 import styles from './Menu.module.sass'
 import { NavLink } from 'react-router-dom'
 import Burger from 'icons/Burger'
+import Crose from 'icons/Crose'
 
 const Menu = () => {
-  const [menuIsShow, setMenuIsShow] = useState(false)
+  const [menuIsActive, setMenuIsActive] = useState(false)
 
   const toggleMenu = () => {
-    setMenuIsShow(!menuIsShow)
+    setMenuIsActive(!menuIsActive)
   }
   
   return (
     <nav className={styles.container}>
-      <div className={styles.menu__container}>
+      <div className={`${styles.menu__container} ${menuIsActive ? styles.active : ''}`}>
         <ul>
           <li>
             <NavLink to="/all-projects" className={styles.menu__link}>
@@ -36,8 +37,8 @@ const Menu = () => {
           </li>
         </ul>
       </div>
-      <div onClick={toggleMenu}>
-        <Burger isShow={menuIsShow}/>
+      <div className={styles.burger__icon} onClick={toggleMenu}>
+        {menuIsActive ? <Crose/> : <Burger/>}
       </div>
     </nav>
   )
