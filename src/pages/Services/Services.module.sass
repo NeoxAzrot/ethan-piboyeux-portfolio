@@ -1,7 +1,10 @@
 @import 'styles/variables'
 
 .container
+    margin-top: 10%
     width: 100%
+    @media ( max-width: 743px )
+        margin-top: 15%
     .right
         display: flex
         flex-direction: row
@@ -14,10 +17,16 @@
             width: 70%
 
             p
+                margin-bottom: 10%
                 font-family: $main-font
                 font-size: 3rem
                 font-weight: 500
                 color: $primary-color
+                @media ( max-width: 920px )
+                    font-size: 2.2rem
+                @media ( max-width: 743px )
+                    text-align: right
+                    
 
                 .service
                     font-family: $main-font
@@ -40,6 +49,8 @@
         justify-content: flex-end
         align-items: center
         margin: 15px
+        @media ( max-width: 743px )
+            justify-content: center
         
         .contact
             font-family: $main-font
