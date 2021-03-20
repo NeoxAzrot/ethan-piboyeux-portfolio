@@ -8,16 +8,6 @@ const ProjectHomePage = (props) => {
   const [actualProject, setActualProject] = useState(0)
   const [isScrolling, setIsScrolling] = useState(false)
 
-  const mouseWheelHandler = (e) => {
-    if(!isScrolling) {
-      e = window.event || e
-      let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))
-  
-      if(delta === 1) previousProject()
-      if(delta === -1) nextProject()
-    }
-  }
-
   const nextProject = () => {
     if(actualProject < projects.length - 1) {
       handleScroll()
@@ -34,31 +24,30 @@ const ProjectHomePage = (props) => {
 
   const handleScroll = () => {
     setIsScrolling(true)
-    // On enlève pour que cela scroll qu'une fois
-    if (window.addEventListener) {
-      // IE9, Chrome, Safari, Opera
-      window.removeEventListener("mousewheel", mouseWheelHandler, false)
-      // Firefox
-      window.removeEventListener("DOMMouseScroll", mouseWheelHandler, false)
-      // IE 6~8
-    } else window.detachEvent("onmousewheel", mouseWheelHandler)
 
     setTimeout(() => {
       return setIsScrolling(false)
-    }, 2000)
+    }, 1500)
   }
 
   useEffect(() => {
-    const watchScroll = () => {
-      if (window.addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        window.addEventListener("mousewheel", mouseWheelHandler, false)
-        // Firefox
-        window.addEventListener("DOMMouseScroll", mouseWheelHandler, false)
-        // IE 6~8
-      } else window.attachEvent("onmousewheel", mouseWheelHandler)
+    const mouseWheelHandler = (e) => {
+      if(!isScrolling) {
+        e = window.event || e
+        let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))
+    
+        if(delta === 1) previousProject()
+        if(delta === -1) nextProject()
+      }
     }
-    watchScroll()
+    if (window.addEventListener) {
+      // IE9, Chrome, Safari, Opera
+      window.addEventListener("mousewheel", mouseWheelHandler, false)
+      // Firefox
+      window.addEventListener("DOMMouseScroll", mouseWheelHandler, false)
+      // IE 6~8
+    } else window.attachEvent("onmousewheel", mouseWheelHandler)
+
 
     return () => {
       if (window.addEventListener) {

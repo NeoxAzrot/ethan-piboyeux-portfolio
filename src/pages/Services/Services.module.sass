@@ -1,1 +1,40 @@
 @import 'styles/variables'
+
+.container
+  .text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 80%
+    text-align: center
+    @media screen and ( max-width: 520px )
+      text-align: left
+      width: 85%
+      
+    p
+      font-size: 2.6rem
+      font-weight: 400
+      font-family: $main-font
+      @media screen and ( max-width: 520px )
+        font-size: 2rem
+
+      span
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: .2rem
+          background: $primary-color
+
+  .link__contact
+    position: absolute
+    bottom: 7rem
+    right: 15%
+    @media screen and ( max-width: 520px )
+      bottom: 2rem
+      right: 0
+      left: 2rem

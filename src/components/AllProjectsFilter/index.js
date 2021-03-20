@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './AllProjectsFilter.module.sass'
-import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const AllProjectsFilter = (props) => {
@@ -11,7 +10,7 @@ const AllProjectsFilter = (props) => {
       {projects.map((project, index) => {
         return (
           // style={{backgroundImage: `url(${project.image})`}}
-          <div key={index} className={`${styles.project__item} ${project.filter == filter ? styles.active : ''} ${filter == 'all-projects' ? styles.active : ''}`}>
+          <div key={index} className={`${project.class} ${styles.project__item} ${project.filter == filter ? styles.active : ''} ${filter == 'all-projects' ? styles.active : ''}`}>
             <img src={project.image} className={styles.project__image}/>
             {/* <p className={styles.project__services}>{project.services}</p>
             <p className={styles.project__year}>{project.year}</p> */}

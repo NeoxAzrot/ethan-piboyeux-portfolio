@@ -1,0 +1,33 @@
+@import 'styles/variables'
+
+.container
+  margin-bottom: 3rem
+
+  h2
+    font-size: 1.8rem
+    font-weight: 500
+    font-family: $main-font
+    margin-bottom: 2rem
+    @media screen and ( max-width: 520px )
+      font-size: 1.5rem
+
+  .credits__container
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    font-size: 1.8rem
+    font-weight: 500
+    font-family: $main-font
+    @media screen and ( max-width: 520px )
+      font-size: 1.5rem
+
+    .credit__name, .credit__role
+      display: flex
+      justify-content: center
+      align-items: flex-start
+      flex-direction: column
+
+    .credit__role
+      margin-left: 8rem
+      @media screen and ( max-width: 520px )
+        margin-left: 4rem

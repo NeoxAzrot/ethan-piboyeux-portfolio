@@ -1,62 +1,61 @@
 @import 'styles/variables'
 
 .container
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    width: 100%
+  margin: auto
+  margin-top: 9rem
+  margin-bottom: 12rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 85%
+
+  .citation__container
+    transform: rotate(-270deg)
+    white-space: nowrap
+    width: 20%
+    align-self: flex-start    
+    @media screen and ( max-width: 850px )
+      display: none
+    .citation
+      width: 100%
+      h1, h2
+        font-size: 10rem
+        font-weight: 400
+        font-family: $accent-font
     
-    .text__column
-        p
-            margin-top: 200px
-            font-family: $accent-font
-            font-size: 6rem
-            font-weight: 400
-            color: $primary-color
-            transform: rotate(90deg)
-               
-            @media (max-width:766px) 
-                display: none
-            
-
-    .text__informations
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        width: 100%
-        height: 100%
-
-        .step
-            text-align: left
-            margin: 15px
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            h2
-                margin: 10px 10px 10px 30px
-                text-transform: uppercase
-               
-                font-family: $main-font
-                font-size: 1.8rem
-                font-weight: 700
-                color: $primary-color
-            h3
-                margin: 10px
-                font-family: $main-font
-                text-transform: uppercase
-                font-weight: 300
-                font-size: 1.8rem
-                color: $primary-color
-            p
-                margin: 10px
-                font-family: $main-font
-                font-size: 1.8rem
-                font-weight: 300
-                color: $primary-color
-            a
-                margin-top: 10px
-                font-family: $main-font
-                font-weight: 300
-                font-size: 1.8rem
-                text-decoration: underline
-                color: $primary-color
+  .text
+    width: 70%
+    margin-top: 10rem
+    margin-bottom: 15rem
+    margin-left: 5rem
+    @media screen and ( max-width: 850px )
+      width: 100%
+      margin-left: 0
+    .item
+      margin-bottom: 7rem
+      @media screen and ( max-width: 520px )
+        margin-bottom: 5rem
+      h4
+        font-size: 2.2rem
+        font-weight: 700
+        font-family: $main-font
+        margin-left: 5rem
+        margin-bottom: 1rem
+        text-transform: uppercase
+        @media screen and ( max-width: 520px )
+          font-size: 1.8rem
+      p, ul li, a, h5
+        font-size: 1.8rem
+        font-weight: 300
+        font-family: $main-font
+        @media screen and ( max-width: 520px )
+          font-size: 1.5rem
+      ul
+        list-style-type: none
+        padding-left: 0
+      
+      .credit
+        a, ul
+          margin-left: 3rem
+        &:last-child
+          margin-top: 1rem
