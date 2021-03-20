@@ -12,10 +12,10 @@ const Footer = (props) => {
   let allProjectsLink
 
   if(allProjectsAreShow) {
-    allProjectsText = 'close'
+    allProjectsText = 'Fermer'
     allProjectsLink = '/'
   } else {
-    allProjectsText = 'all-projects'
+    allProjectsText = 'mes-projets'
     allProjectsLink = 'all-projects'
   }
 

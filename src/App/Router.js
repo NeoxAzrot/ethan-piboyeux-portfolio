@@ -10,6 +10,8 @@ import Project3 from 'pages/Project3'
 import Project4 from 'pages/Project4'
 import Project5 from 'pages/Project5'
 import Services from 'pages/Services'
+import MentionsLegales from 'pages/MentionsLegales'
+import Error404 from 'pages/Error404'
 
 const Router = () => {
   return (
@@ -55,8 +57,16 @@ const Router = () => {
           <Services />
         </Route>
 
+        <Route exact path="/mentions-legales">
+          <MentionsLegales />
+        </Route>
+
         <Route exact path="/">
           <Home />
+        </Route>
+
+        <Route exact path="*">
+          <Error404 />
         </Route>
 
         <Redirect to="/error-404" />

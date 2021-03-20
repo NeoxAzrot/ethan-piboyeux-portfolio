@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Home.module.sass'
 import Header from 'components/Header'
@@ -8,44 +9,48 @@ import ProjectHomePage from 'components/ProjectHomePage'
 const Home = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Ethan Piboyeux | Portfolio</title>
+        <meta name="description" content="Description" />
+      </Helmet>
       <Header url='.'/>
       <div className={styles.container}>
         <ProjectHomePage projects={
           [
             {
-              name: 'Project1',
-              year: '2018',
-              services: 'Design',
+              name: 'Louis Pion',
+              year: '2020',
+              services: 'Production vidéo',
               link: 'project-1',
-              image: 'https://picsum.photos/800'
+              image: 'images/louis-pion/louis-pion-ethan-piboyeux.jpg'
             },
             {
-              name: 'Project2',
-              year: '2020',
-              services: 'Video',
+              name: 'Mode',
+              year: '2021',
+              services: 'D.A, Design Graphique',
               link: 'project-2',
-              image: 'https://picsum.photos/800'
+              image: 'images/mode/lycan-mode-ethan-piboyeux.jpg'
             },
             {
-              name: 'Project3',
-              year: '2018',
-              services: 'Song',
+              name: 'Youv Dee',
+              year: '2021',
+              services: 'D.A, Design Graphique',
               link: 'project-3',
-              image: 'https://picsum.photos/800'
+              image: 'images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg'
             },
             {
-              name: 'Project4',
-              year: '2016',
-              services: 'Design',
+              name: 'Trieste',
+              year: '2021',
+              services: 'D.A, Design Graphique',
               link: 'project-4',
-              image: 'https://picsum.photos/800'
+              image: 'images/trieste/trieste-ethan-piboyeux.jpg'
             },
             {
-              name: 'Project5',
-              year: '2020',
-              services: 'Cover',
+              name: 'Kleidi',
+              year: '2021',
+              services: 'Chef de projet',
               link: 'project-5',
-              image: 'https://picsum.photos/800'
+              image: 'images/kleidi/kleidi-ethan-piboyeux.jpg'
             },
           ]
         }/>

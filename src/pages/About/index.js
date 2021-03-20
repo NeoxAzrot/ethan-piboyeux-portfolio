@@ -1,55 +1,84 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './About.module.sass'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
+import { NavLink } from 'react-router-dom'
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 
 const About = () => {
   return (
-    <Layout>
-      <Header url='/about'/>
-      <div className={styles.container}>
-        <div className={styles.text__column}>
-          <p>L’art est dans l’infini dEtail.Federico Fellini</p>
-        </div>
-        <div className={styles.text__informations}>
-          <div className={styles.step}>
-            <h2>1. ETHAN PIBOYEUX</h2>
-            <p>Ethan est un jeune vidéaste, graphiste et photographe basé sur Bordeaux. Il est spécialisé dans la direction artistique et la réalisation.
-Sa vision artistique est influencé par le monde urbain et le monde du luxe.</p>
+    <ParallaxProvider>
+      <Layout>
+        <Helmet>
+          <title>Ethan Piboyeux | À propos</title>
+          <meta name="description" content="Description" />
+        </Helmet>
+        <Header url='/à-propos'/>
+          <div className={styles.container}>
+            <Parallax className={styles.citation__container} x={['380px', '-250px']}>
+                <div className={styles.citation}>
+                  <h1>L’art est dans l’infini detail.</h1>
+                  <h2>Federico Fellini</h2>
+                </div>
+            </Parallax>
+            <Parallax className={styles.text} y={['-250px', '450px']}>
+              <div className={styles.item}>
+                <h4>1. Ethan Piboyeux</h4>
+                <p>
+                  Ethan est un jeune vidéaste, graphiste et photographe basé sur Bordeaux. 
+                  Il est spécialisé dans la direction artistique et la réalisation. 
+                  Sa vision artistique est influencé par le monde urbain et le monde du luxe.
+                </p>
+              </div>
+              <div className={styles.item}>
+                <h4>2. Associations</h4>
+                <ul>
+                  <li><a href="http://www.faismoisigne.org/">Fais-Moi Signe</a> - Communication, Graphisme</li>
+                  <li><a href="https://kleidi.org/">Kleidi</a> - Chef de projet</li>
+                  <li><a href="#">C-Production</a> - Graphiste & Vidéaste</li>
+                  <li><a href="#">ETAPE Coworking</a> - Médiateur Numérique</li>
+                </ul>
+              </div>
+              <div className={styles.item}>
+                <h4>3. Presse</h4>
+                <a href="#">Courrier de Gironde 08.01.21</a>
+              </div>
+              <div className={styles.item}>
+                <h4>4. Réseaux</h4>
+                <ul>
+                  <li><a href="https://www.instagram.com/piboyeux.design/">Instagram</a></li>
+                  <li><a href="https://www.pinterest.fr/EthanPiboyeux/_created/">Pinterest</a></li>
+                </ul>
+              </div>
+              <div className={styles.item}>
+                <h4>5. CV</h4>
+                <a href="#">cv-piboyeux.pdf</a>
+              </div>
+              <div className={styles.item}>
+                <h4>6. Crédits</h4>
+                <div className={styles.credit}>
+                  <h5>Code & Love</h5>
+                  <a href="#">Développeur</a>
+                </div>
+                <div className={styles.credit}>
+                  <h5>Typographies</h5>
+                  <ul>
+                    <li>Agenda</li>
+                    <li>TheNightWatch</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.item}>
+                <h4>7. Légales</h4>
+                <NavLink to='/mentions-legales'>mentions-legales.html</NavLink>
+              </div>
+            </Parallax>
           </div>
-          <div className={styles.step}>
-            <h2>2. Associations </h2>
-              <p><a href=''>Fais-Moi Signe</a> - Communication, Graphisme</p>
-              <p><a href=''>Kleidi</a> - Chef de projet</p>
-              <p><a href=''>C-Production</a> - Graphiste & Vidéaste</p>
-              <p><a href=''>ETAPE Coworking</a> - Médiateur Numérique</p>
-          </div>
-          <div className={styles.step}>
-            <h2>3. PRESSE</h2>
-              <a href=''>Courrier de Gironde 08.01.21</a>
-          </div>
-          <div className={styles.step}>
-            <h2>4. Réseaux </h2>
-              <a href=''>Instagram</a>
-              <a href=''>Pinterest</a>
-          </div>
-          <div className={styles.step}>
-            <h2>5. CV</h2>
-            <a href=''>cv-piboyeux.pdf</a>
-          </div>
-          <div className={styles.step}>
-            <h2>6. CRÉDITS </h2>
-              <h3>CODE & LOVE</h3>
-                <a href='https://samilafrance.com/'>Sami Lafrance</a>
-              <h3>Typographies</h3>
-                <p>Agenda</p>
-                <p>TheNightWatch</p>
-          </div>
-        </div>
-      </div>
-      <Footer allProjectsDisplay={false}/>
-    </Layout>
+        <Footer allProjectsDisplay={false}/>
+      </Layout>
+    </ParallaxProvider>
   )
 }
 

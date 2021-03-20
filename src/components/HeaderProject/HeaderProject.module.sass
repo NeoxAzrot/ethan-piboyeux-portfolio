@@ -1,0 +1,101 @@
+@import 'styles/variables'
+
+.container
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  flex-direction: column
+  width: 85%
+  margin: auto
+  margin-top: 20rem
+  margin-bottom: 7rem
+  @media screen and ( max-width: 900px )
+    width: 100%
+    margin-top: 15rem
+  @media screen and ( max-width: 680px )
+    margin-top: 12rem
+  @media screen and ( max-width: 520px )
+    margin-top: 10rem
+
+  .title
+    position: relative
+    @media screen and ( max-width: 900px )
+      align-self: flex-start
+    h1
+      font-size: 16rem
+      font-weight: 400
+      font-family: $accent-font
+      @media screen and ( max-width: 1130px )
+        font-size: 12.4rem
+      @media screen and ( max-width: 900px )
+        font-size: 10rem
+      @media screen and ( max-width: 680px )
+        font-size: 7rem
+      @media screen and ( max-width: 520px )
+        font-size: 4.5rem
+    
+    .number_of_projects
+      position: absolute
+      top: 2rem
+      left: -5rem
+      transform: rotate(90deg)
+      display: flex
+      justify-content: center
+      align-items: center
+      @media screen and ( max-width: 900px )
+        display: none
+
+      p
+        font-size: 2.2rem
+        font-weight: 500
+        font-family: $main-font
+
+      span
+        display: block
+        width: 2rem
+        height: .3rem
+        background: $primary-color
+        margin: 0 1rem
+
+  .about
+    width: 40%
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    margin-top: 8rem
+    @media screen and ( max-width: 680px )
+      width: 70%
+      margin-top: 4rem
+    @media screen and ( max-width: 520px )
+      margin-top: 3rem
+      width: 80%
+    .link
+      font-size: 2.6rem
+      font-weight: 300
+      font-family: $main-font
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      @media screen and ( max-width: 520px )
+        font-size: 2rem
+
+      svg
+        margin-left: 1.5rem
+
+    .container__services
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      width: 80%
+      margin-top: 4rem
+      font-size: 1.8rem
+      font-weight: 500
+      font-family: $main-font
+      @media screen and ( max-width: 1130px )
+        width: 100%
+      @media screen and ( max-width: 520px )
+        font-size: 1.4rem
+        margin-top: 2.5rem
+      ul
+        list-style-type: none

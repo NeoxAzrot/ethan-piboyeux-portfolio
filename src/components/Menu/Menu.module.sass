@@ -4,7 +4,7 @@
   display: flex
   justify-content: flex-end
   align-items: center
-  
+
   .burger__icon
     background: $accent-color
     position: relative
@@ -21,29 +21,81 @@
       height: 3rem
       z-index: 10
       cursor: pointer
-  
+    
   .menu__container
-    transform: translateX(100%)
-    opacity: 0
-    transition: .8s cubic-bezier(0.4, 0, 0.2, 1)
-    &.active
-      transform: translateX(0)
-      opacity: 1
+    &.desktop
+      transform: translateX(100%)
+      opacity: 0
+      transition: opacity .8s cubic-bezier(0.4, 0, 0.2, 1), transform .8s cubic-bezier(0.4, 0, 0.2, 1)
+      &.active
+        transform: translateX(0)
+        opacity: 1
 
-  ul
-    display: flex
-    justify-content: space-between
-    align-items: center
-    list-style-type: none
-    padding: 0
-    margin-right: 6rem
+      ul
+        display: flex
+        justify-content: space-between
+        align-items: center
+        list-style-type: none
+        padding: 0
+        margin-right: 6rem
 
-    li
-      margin-right: 5rem
-      &:last-child
-        margin-right: 0
-      
-      a
-        font-size: 1.8rem
-        font-weight: 500
-        font-family: $main-font
+        li
+          margin-right: 5rem
+          &:last-child
+            margin-right: 0
+          
+          a
+            font-size: 1.8rem
+            font-weight: 500
+            font-family: $main-font
+            &::before
+              width: 0
+            &:hover
+              &::before
+                width: 100%
+
+    &.mobile
+      display: none
+      height: 100vh
+      width: 100vw
+      position: fixed
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      background: $accent-color
+      transform: translate(100%, -50%)
+      transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1)
+      &.active
+        transform: translate(-50%, -50%)
+
+      ul
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        list-style-type: none
+        padding: 0
+        
+        li
+          margin-bottom: 3rem
+          &:last-child
+            margin-bottom: 0
+          
+          a
+            font-size: 2.5rem
+            font-weight: 500
+            font-family: $main-font
+            &::before
+              width: 0
+            &:hover
+              &::before
+                width: 100%
+    
+    @media screen and ( max-width: 900px )
+      &.desktop
+        display: none
+      &.mobile
+        display: flex

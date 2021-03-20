@@ -7,11 +7,21 @@
   width: calc(100% - 45px * 2)
   position: absolute
   z-index: 9999
+  @media screen and ( max-width: 520px )
+    width: calc(100% - 20px * 2)
 
   .logo__container
     font-size: 1.8rem
     font-weight: 500
     font-family: $main-font
+    z-index: 99
+    @media screen and ( max-width: 520px )
+      font-size: 1.6rem
+
     
     .logo__url
       display: inline
+
+    a
+      &::before
+        width: 0

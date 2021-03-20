@@ -1,2 +1,15 @@
 @import 'styles/variables'
 
+.container
+  position: fixed
+  left: 0
+  top: 0
+  border-radius: 50%
+  border: 2px solid $primary-color
+  pointer-events: none
+  z-index: 999999
+  transition: transform .1s ease
+  mix-blend-mode: difference
+
+  &.is__hover
+    background: red

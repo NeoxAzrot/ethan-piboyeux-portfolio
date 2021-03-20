@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './AllProjects.module.sass'
 import Header from 'components/Header'
@@ -15,7 +16,11 @@ const AllProjects = () => {
 
   return (
     <Layout>
-      <Header url='/all-projects'/>
+      <Helmet>
+        <title>Ethan Piboyeux | Mes projets</title>
+        <meta name="description" content="Description" />
+      </Helmet>
+      <Header url='/mes-projets'/>
       <div className={styles.container}>
         <div className={styles.container__filter}>
           <ul>
