@@ -1,6 +1,7 @@
+// Importation des fichiers
 @import 'styles/variables'
 
-// Pour les polices
+// Importation des polices
 @font-face
  font-family: 'Agenda'
  src: url("./fonts/AgendaLight.otf") format("opentype")
@@ -26,7 +27,7 @@
  src: url("./fonts/TheNightWatch.ttf") format("truetype")
  font-weight: 400
 
-// Pour toutes les pages
+// Le Sass pour toutes les pages
 *
   margin: 0
   padding: 0
@@ -34,10 +35,11 @@
 
 html
   font-size: 62.5%
+  overflow-x: hidden
 
 body
   background: $accent-color
-  min-width: 100vw
+  min-width: calc(100vw - 45px * 2)
   min-height: calc(100vh - 45px * 2)
   font-family: $main-font
   font-size: 1.6rem
@@ -45,6 +47,7 @@ body
   color: $primary-color
   @media screen and ( max-width: 520px )
     min-height: calc(100vh - 20px * 2)
+    min-width: calc(100vw - 20px * 2)
 
 a
   color: $primary-color
@@ -63,12 +66,15 @@ a
     &::before
       width: 0
 
+img
+  user-select: none
+
 // Pour changer la sélection des éléments
 *::selection
   background: $primary-color
   color: $accent-color
 
-// Pour le layout uniquement
+// Le Sass de la page uniquement
 .container
   padding: 45px
   position: relative

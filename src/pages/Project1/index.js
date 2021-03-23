@@ -1,4 +1,5 @@
-import React from 'react'
+// Importation des fichiers
+import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project1.module.sass'
@@ -7,39 +8,49 @@ import HeaderProject from 'components/HeaderProject'
 import LinkNextProject from 'components/LinkNextProject'
 
 const Project1 = () => {
+
+  // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <Layout>
+      {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Louis Pion</title>
         <meta name="description" content="Description" />
       </Helmet>
+      
       <Header url='/louis-pion'/>
       <div className={styles.container}>
         <HeaderProject 
         title="Louis Pion"
         index={1}
         titleLink="Voir la vidéo"
-        link="#"
+        link="https://youtu.be/MK6FZHSqu68"
         year={2021}
         services={['Direction artistique', 'Production vidéo', 'Montage vidéo']}
         />
 
         <div className={styles.images__container}>
-          <video controls poster="images/louis-pion/louis-pion-ethan-piboyeux-miniature.jpg">
+          <video className={styles.animation__transform_top} controls controlsList="nodownload" poster="images/louis-pion/louis-pion-ethan-piboyeux-miniature.jpg">
             <source src="images/louis-pion/louis-pion-ethan-piboyeux.mp4" type="video/mp4"/>
           </video>
-          <div className={styles.row}>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg"/>
             <img src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg"/>
           </div>
-          <div className={styles.row}>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg"/>
             <img src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg"/>
           </div>
         </div>
 
         <div className={styles.footer__project}>
-          <LinkNextProject text="Projet suivant" link="/project-2"/>
+          <div className={styles.animation__background}>
+            <LinkNextProject text="Projet suivant" link="/mode"/>
+          </div>
         </div>
       </div>
     </Layout>

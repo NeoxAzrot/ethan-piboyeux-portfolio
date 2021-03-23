@@ -1,4 +1,5 @@
-import React from 'react'
+// Importation des fichiers
+import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project4.module.sass'
@@ -8,32 +9,40 @@ import LinkNextProject from 'components/LinkNextProject'
 import Credits from 'components/Credits'
 
 const Project4 = () => {
+
+  // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <Layout>
+      {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Trieste</title>
         <meta name="description" content="Description" />
       </Helmet>
+      
       <Header url='/trieste'/>
       <div className={styles.container}>
         <HeaderProject 
         title="Trieste"
         index={4}
         titleLink="Essayer le jeu"
-        link="#"
+        link="https://trieste.netlify.app/"
         year={2021}
         services={['Direction artistique', 'Design graphique', 'Écriture de scénario']}
         />
 
-        <p className={styles.text__introduction}>Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux.</p>
+        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux.</p>
 
         <div className={styles.images__container}>
-          <img src="images/trieste/trieste-ethan-piboyeux-4.jpg"/>
-          <img src="images/trieste/trieste-ethan-piboyeux-7.jpg"/>
-          <img src="images/trieste/trieste-ethan-piboyeux-6.jpg"/>
-          <img src="images/trieste/trieste-ethan-piboyeux-5.jpg"/>
-          <img src="images/trieste/trieste-ethan-piboyeux-2.jpg"/>
-          <img src="images/trieste/trieste-ethan-piboyeux-3.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-4.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-7.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-6.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-5.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-2.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-3.jpg"/>
         </div>
 
         <div className={styles.footer__project}>
@@ -65,7 +74,9 @@ const Project4 = () => {
               }
             ]}/>
 
-            <LinkNextProject text="Projet suivant" link="/project-5"/>
+            <div className={styles.animation__background}>
+              <LinkNextProject text="Projet suivant" link="/kleidi"/>
+            </div>
           </div>
         </div>
       </div>
