@@ -88,7 +88,7 @@ Je t'écris quelques exemples pour que tu comprennes un peu mieux :
 * `0rem` = `0px`
 * `1.1rem` = `11px`
 
-## Le système de classe avec les $
+## Le système de classe avec les `$`
 
 Pour utiliser plusieurs classe sur un élément, c'est un peu compliqué en React.
 
