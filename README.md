@@ -53,22 +53,22 @@ Tu as **6 dossiers** principaux :
 * `pages` qui contient toutes tes pages
 * `styles` qui contient toutes tes variables de Sass
 
-### Le routeur
+## Le routeur
 
 Pour modifier l'URL de tes pages, tu vas devoir modifier le routeur qui se trouve dans le dossier `src/App/Router.js`.
 
-### Les images
+## Les images
 
 Pour changer ou ajouter des images, tu dois les mettre directement dans le dossier `public/images`.
 
 Par la suite, tu vas pouvoir les appeler dans ton code avec l'URL suivant : `public/images/le-chemin-de-ton-image`.
 
 
-### Les polices
+## Les polices
 
 Concernant les polices, je les import dans le **layout**, pour que chaque page les import. Si tu es amené à vouloir les changer, il faudra mettre les nouvelles polices dans ce dossier : `src/components/Layout/fonts` et les import dans ce fichier : `src/components/Layout/Layout.module.sass`.
 
-### Les variables
+## Les variables
 
 Pour modifier les couleurs, les polices ou encore les animations de ton site, c'est très simple. Tu as juste à les modifier dans le dossier `src/styles`
 
