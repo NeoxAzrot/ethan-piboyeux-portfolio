@@ -1,11 +1,13 @@
+// Importation des fichiers
 @import 'styles/variables'
 
+// Le Sass de la page
 .container
   display: flex
   justify-content: space-between
   align-items: center
   width: calc(100% - 45px * 2)
-  position: absolute
+  position: fixed
   bottom: 45px
   @media screen and ( max-width: 520px )
     width: calc(100% - 20px * 2)
@@ -26,10 +28,18 @@
       margin-right: .5rem
 
   .contact__logo
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and ( max-width: 850px )
+      flex-direction: column
 
     a
       &:first-child
-        margin-right: 1.5rem
+        margin-right: 1rem
+        @media screen and ( max-width: 850px )
+          margin-right: 0
+          margin-bottom: 1rem
       &::before
         width: 0
 

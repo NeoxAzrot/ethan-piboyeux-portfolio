@@ -1,3 +1,4 @@
+// Importation des fichiers
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
 import Home from 'pages/Home'
@@ -33,23 +34,23 @@ const Router = () => {
           <Contact />
         </Route>
 
-        <Route exact path="/project-1">
+        <Route exact path="/louis-pion">
           <Project1 />
         </Route>
 
-        <Route exact path="/project-2">
+        <Route exact path="/mode">
           <Project2 />
         </Route>
 
-        <Route exact path="/project-3">
+        <Route exact path="/youv-dee">
           <Project3 />
         </Route>
 
-        <Route exact path="/project-4">
+        <Route exact path="/trieste">
           <Project4 />
         </Route>
 
-        <Route exact path="/project-5">
+        <Route exact path="/kleidi">
           <Project5 />
         </Route>
 
@@ -57,7 +58,7 @@ const Router = () => {
           <Services />
         </Route>
 
-        <Route exact path="/mentions-legales">
+        <Route exact path="/legal-notices">
           <MentionsLegales />
         </Route>
 

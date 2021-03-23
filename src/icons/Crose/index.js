@@ -1,3 +1,4 @@
+// Importation des fichiers
 import React from 'react'
 
 const Crose = () => {

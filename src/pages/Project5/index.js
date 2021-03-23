@@ -1,4 +1,5 @@
-import React from 'react'
+// Importation des fichiers
+import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project5.module.sass'
@@ -8,33 +9,41 @@ import LinkNextProject from 'components/LinkNextProject'
 import Credits from 'components/Credits'
 
 const Project5 = () => {
+
+  // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <Layout>
+      {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Kleidi</title>
         <meta name="description" content="Description" />
       </Helmet>
+      
       <Header url='/kleidi'/>
       <div className={styles.container}>
         <HeaderProject 
         title="Kleidi"
         index={5}
         titleLink="Voir le site"
-        link="#"
+        link="https://kleidi.org/"
         year={2021}
         services={['Chef de projet']}
         />
 
-        <p className={styles.text__introduction}>Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides.</p>
+        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides.</p>
 
         <div className={styles.images__container}>
-          <div className={styles.row}>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img src="images/kleidi/kleidi-ethan-piboyeux.jpg"/>
-            <video controls poster="images/kleidi/kleidi-ethan-piboyeux-miniature-1.jpg">
+            <video controls controlsList="nodownload" poster="images/kleidi/kleidi-ethan-piboyeux-miniature-1.jpg">
               <source src="images/kleidi/kleidi-plaque-ethan-piboyeux.mp4" type="video/mp4"/>
             </video>
           </div>
-          <video controls poster="images/kleidi/kleidi-ethan-piboyeux-miniature-2.jpg">
+          <video className={styles.animation__transform_top} controls controlsList="nodownload" poster="images/kleidi/kleidi-ethan-piboyeux-miniature-2.jpg">
             <source src="images/kleidi/kleidi-inauguration-ethan-piboyeux.mp4" type="video/mp4"/>
           </video>
         </div>
@@ -91,8 +100,9 @@ const Project5 = () => {
                 role: 'Partenaire'
               }
             ]}/>
-
-            <LinkNextProject text="Projet suivant" link="/project-1"/>
+            <div className={styles.animation__background}>
+              <LinkNextProject text="Projet suivant" link="/louis-pion"/>
+            </div>
           </div>
         </div>
       </div>

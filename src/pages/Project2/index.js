@@ -1,4 +1,5 @@
-import React from 'react'
+// Importation des fichiers
+import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project2.module.sass'
@@ -8,30 +9,38 @@ import LinkNextProject from 'components/LinkNextProject'
 import Credits from 'components/Credits'
 
 const Project2 = () => {
+
+  // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <Layout>
+      {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Mode</title>
         <meta name="description" content="Description" />
       </Helmet>
+      
       <Header url='/mode'/>
       <div className={styles.container}>
         <HeaderProject 
         title="Mode"
         index={2}
         titleLink="Écouter le single"
-        link="#"
+        link="https://open.spotify.com/track/3Cdho3oYoyHUKLvd06s2Uw?si=8144267fd9914bac"
         year={2021}
         services={['Direction artistique', 'Design graphique']}
         />
 
         <div className={styles.images__container}>
-          <img src="images/mode/lycan-mode-ethan-piboyeux-2.jpg"/>
-          <div className={styles.row}>
+          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-2.jpg"/>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img src="images/mode/lycan-mode-ethan-piboyeux-3.jpg"/>
             <img src="images/mode/lycan-mode-ethan-piboyeux-4.jpg"/>
           </div>
-          <img src="images/mode/lycan-mode-ethan-piboyeux-5.jpg"/>
+          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-5.jpg"/>
         </div>
 
         <div className={styles.footer__project}>
@@ -46,8 +55,9 @@ const Project2 = () => {
                 role: 'Artiste'
               }
             ]}/>
-
-            <LinkNextProject text="Projet suivant" link="/project-3"/>
+            <div className={styles.animation__background}>
+              <LinkNextProject text="Projet suivant" link="/youv-dee"/>
+            </div>
           </div>
         </div>
       </div>

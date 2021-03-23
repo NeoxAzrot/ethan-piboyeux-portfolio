@@ -1,11 +1,13 @@
+// Importation des fichiers
 @import 'styles/variables'
 
+// Le Sass de la page
 .container
   display: flex
   justify-content: flex-end
   align-items: center
 
-  .burger__icon
+  .icon__container
     background: $accent-color
     position: relative
     &::after
@@ -16,11 +18,40 @@
       width: 5rem
       height: 100%
       background: $accent-color
-
-    svg
-      height: 3rem
-      z-index: 10
+    
+    .icon
+      height: 5rem
+      display: flex
+      justify-content: center
+      align-items: center
       cursor: pointer
+      z-index: 10
+      .burger__crose
+        position: relative
+        width: 3.6rem
+        height: .25rem
+        background: $primary-color
+        transition: background .8s cubic-bezier(0.4, 0, 0.2, 1)
+        &::before, &::after
+          content: ''
+          position: absolute
+          left: .3rem
+          width: 3rem
+          height: .25rem
+          background: $primary-color
+          transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1)
+        &::before
+          transform: translateY(-1.15rem)
+        &::after
+          transform: translateY(1.15rem)
+        
+      &.active
+        .burger__crose
+          background: transparent
+          &::before
+            transform: rotate(45deg)
+          &::after
+            transform: rotate(-45deg)
     
   .menu__container
     &.desktop

@@ -1,5 +1,24 @@
+// Importation des fichiers
 @import 'styles/variables'
+@import 'styles/animations'
 
+// Les animations
+.animation__background
+  position: relative
+  visibility: hidden
+  animation: display__background .0001s forwards
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background: $primary-color
+    visibility: visible
+    animation: animation__background .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+// Le Sass de la page
 .container
   position: absolute
   top: 50%
@@ -12,5 +31,9 @@
     font-size: 2.2rem
     font-weight: 400
     font-family: $main-font
+    &.animation__background
+      animation-delay: .9s
+      &::after
+        animation-delay: .4s
     @media screen and ( max-width: 360px )
       font-size: 1.8rem

@@ -1,5 +1,33 @@
+// Importation des fichiers
 @import 'styles/variables'
+@import 'styles/animations'
 
+// Les animations
+@mixin img-animation
+  @for $i from 1 through 10
+    &:nth-child(#{$i})
+      animation-delay: #{2 + $i * .2}s
+
+.animation__transform_top
+  opacity: 0
+  animation: animation__transform_top .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+.animation__background
+  position: relative
+  visibility: hidden
+  animation: display__background .0001s forwards
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background: $primary-color
+    visibility: visible
+    animation: animation__background .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+// Le Sass de la page
 .container
   margin-bottom: 5rem
   .images__container
@@ -8,6 +36,9 @@
     align-items: center
     flex-direction: column
     margin-bottom: 3rem
+
+    .animation__transform_top
+      @include img-animation   
 
     video, img
       border: .1rem rgba($primary-color, .5) solid
@@ -39,6 +70,7 @@
     font-family: $main-font
     text-align: center
     margin-bottom: 4rem
+    animation-delay: 2s
     @media screen and ( max-width: 520px )
       font-size: 1.6rem
   
@@ -57,3 +89,8 @@
       margin-right: 0
       align-items: flex-start
       margin-top: 3rem
+
+    .animation__background
+      animation-delay: 3s
+      &::after
+        animation-delay: 2.5s
