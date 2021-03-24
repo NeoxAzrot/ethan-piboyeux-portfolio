@@ -11,28 +11,28 @@ const ProjectHomePage = (props) => {
   const [isScrolling, setIsScrolling] = useState(false)
 
   // Fonction pour afficher le projet suivant
-  const nextProject = () => {
+  const nextProject = (timeout = 2500) => {
     if(actualProject < projects.length - 1) {
-      handleScroll()
+      handleScroll(timeout)
       setActualProject(actualProject + 1)
     }
   }
 
   // Fonction pour afficher le projet précédent
-  const previousProject = () => {
+  const previousProject = (timeout = 2500) => {
     if(actualProject > 0) {
-      handleScroll()
+      handleScroll(timeout)
       setActualProject(actualProject - 1)
     }
   }
 
   // Fonction pour empêcher le scroll pendant l'affichage d'un projet
-  const handleScroll = () => {
+  const handleScroll = (timeout) => {
     setIsScrolling(true)
 
     setTimeout(() => {
       return setIsScrolling(false)
-    }, 2500) // Temps avant de pouvoir scroll un autre projet --> Temps des animations environ
+    }, timeout) // Temps avant de pouvoir scroll un autre projet --> Temps des animations environ
   }
 
   // Listener à chaque scroll pour afficher le projet suivant ou précédent
@@ -44,8 +44,28 @@ const ProjectHomePage = (props) => {
         e = window.event || e
         let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))
     
-        if(delta === 1) previousProject()
-        if(delta === -1) nextProject()
+        if(delta === 1) previousProject(2500) // On change le temps avant de pouvoir rescroll en fonction de l'animation
+        if(delta === -1) nextProject(2500) // On change le temps avant de pouvoir rescroll en fonction de l'animation
+      }
+    }
+
+    // Fonction pour le scroll sur mobile
+    // Tableau pour comparer les 2 derniers scroll et retourner true ou false en fonction de si on scroll en haut ou en bas
+    let scrollYTouchMove = []
+    const touchMoveHandler = (e) => {
+      if(!isScrolling) {
+        e = window.event || e
+        scrollYTouchMove.push(e.touches[0].screenY)
+        // On le met à 10 pour être sur que c'est bien un touchmove voulu et pas accidentel
+        if(scrollYTouchMove.length >= 10) {
+          if(scrollYTouchMove[0] > scrollYTouchMove[scrollYTouchMove.length - 1]) {
+            nextProject(1500) // On change le temps avant de pouvoir rescroll en fonction de l'animation
+          } else {
+            previousProject(1500) // On change le temps avant de pouvoir rescroll en fonction de l'animation
+          }
+
+          scrollYTouchMove = []
+        }
       }
     }
     // On utilie un listener en fonction du navigateur
@@ -54,6 +74,8 @@ const ProjectHomePage = (props) => {
       window.addEventListener("mousewheel", mouseWheelHandler, false)
       // Firefox
       window.addEventListener("DOMMouseScroll", mouseWheelHandler, false)
+      // Mobile
+      window.addEventListener("touchmove", touchMoveHandler, false)
       // IE 6~8
     } else window.attachEvent("onmousewheel", mouseWheelHandler)
 
@@ -64,6 +86,8 @@ const ProjectHomePage = (props) => {
         window.removeEventListener("mousewheel", mouseWheelHandler, false)
         // Firefox
         window.removeEventListener("DOMMouseScroll", mouseWheelHandler, false)
+        // Mobile
+        window.removeEventListener("touchmove", touchMoveHandler, false)
         // IE 6~8
       } else window.detachEvent("onmousewheel", mouseWheelHandler)
     }
