@@ -1,0 +1,97 @@
+// Importation des fichiers
+@import 'styles/variables'
+@import 'styles/animations'
+
+// Les animations
+@mixin item-animation
+  @for $i from 1 through 15
+    &:nth-child(#{$i})
+      &.animation__transform_top
+        animation-delay: #{.2 + $i * .2}s
+
+.animation__background
+  position: relative
+  visibility: hidden
+  animation: display__background .0001s forwards
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background: $primary-color
+    visibility: visible
+    animation: animation__background .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+.animation__transform_top
+  opacity: 0
+  animation: animation__transform_top .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+// Le Sass de la page
+.container
+  margin: auto
+  margin-top: 9rem
+  margin-bottom: 12rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 85%
+  overflow-y: hidden // A cause de l'overflow hidden du html --> un peu bizarre mais pas trop le choix
+
+  .citation__container
+    transform: rotate(-270deg)
+    white-space: nowrap
+    width: 20%
+    align-self: flex-start
+    margin-top: 2rem
+    @media screen and ( max-width: 850px )
+      display: none
+    .citation
+      width: 250vh // Pour que l'animation prenne toute la longueur à cause du transform rotate qui découpe le width
+      &.animation__background
+        animation-delay: 1.4s
+        &::after
+          animation-delay: 1s
+      h1, h2
+        font-size: 10rem
+        font-weight: 400
+        font-family: $accent-font
+    
+  .text
+    width: 70%
+    margin-top: 10rem
+    margin-bottom: 40rem // A cause de l'overflow hidden du html --> un peu bizarre mais pas trop le choix
+    margin-left: 5rem
+    @media screen and ( max-width: 850px )
+      width: 100%
+      margin-left: 0
+    .item
+      margin-bottom: 7rem
+      @include item-animation
+      @media screen and ( max-width: 520px )
+        margin-bottom: 5rem
+      h4
+        font-size: 2.2rem
+        font-weight: 700
+        font-family: $main-font
+        margin-left: 5rem
+        margin-bottom: 1rem
+        text-transform: uppercase
+        @media screen and ( max-width: 520px )
+          font-size: 1.8rem
+      p, ul li, a, h5
+        font-size: 1.8rem
+        font-weight: 300
+        font-family: $main-font
+        @media screen and ( max-width: 520px )
+          font-size: 1.5rem
+      ul
+        list-style-type: none
+        padding-left: 0
+      
+      .credit
+        a, ul
+          margin-left: 3rem
+        &:last-child
+          margin-top: 1rem

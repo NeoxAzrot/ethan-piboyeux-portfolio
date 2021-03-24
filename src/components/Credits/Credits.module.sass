@@ -1,0 +1,54 @@
+// Importation des fichiers
+@import 'styles/variables'
+@import 'styles/animations'
+
+// Les animations
+@mixin credit-animation
+  @for $i from 1 through 20
+    &:nth-child(#{$i})
+      &.animation__transform_top
+        animation-delay: #{2.5 + $i * .1}s
+
+.animation__transform_top
+  opacity: 0
+  animation: animation__transform_top .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+// Le Sass de la page
+.container
+  margin-bottom: 3rem
+
+  h2
+    font-size: 2.2rem
+    font-weight: 500
+    font-family: $main-font
+    margin-bottom: 2rem
+    &.animation__transform_top
+      animation-delay: 2.4s
+    @media screen and ( max-width: 520px )
+      font-size: 1.8rem
+
+  .credits__container
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    font-size: 1.8rem
+    font-weight: 500
+    font-family: $main-font
+    flex-direction: column
+    @media screen and ( max-width: 520px )
+      font-size: 1.5rem
+    
+    .credit
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: .5rem
+      width: 100%
+      @include credit-animation
+      .name
+        width: 40%
+      .role
+        margin-left: 4rem
+        width: 60%
+        @media screen and ( max-width: 520px )
+          margin-left: 2rem

@@ -1,0 +1,83 @@
+// Les animations avec le background
+@keyframes animation__background
+  0%
+    left: 0
+    width: 0
+  65%
+    left: 0
+    width: 100%
+  100%
+    left: 100%
+    width: 0
+
+@keyframes display__background
+  0%
+    visibility: hidden
+  100%
+    visibility: visible
+
+
+// Les animations avec des transform
+@keyframes animation__transform_left_rotate
+  0%
+    transform: translateX(30px) rotate(90deg)
+    opacity: 0
+  100%
+    transform: translateX(0) rotate(90deg)
+    opacity: 1
+
+@keyframes animation__transform_right_rotate
+  0%
+    transform: translateX(-30px) rotate(90deg)
+    opacity: 0
+  100%
+    transform: translateX(0) rotate(90deg)
+    opacity: 1
+
+@keyframes animation__transform_left
+  0%
+    transform: translateX(15px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes animation__transform_right
+  0%
+    transform: translateX(-15px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes animation__transform_top
+  0%
+    transform: translateY(50px)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes animation__transform_top_small
+  0%
+    transform: translateY(20px)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+
+// Les animations avec le width
+@keyframes animation__width
+  0%
+    width: 0
+  100%
+    width: 100%
+
+
+// Les animations avec l'opacité
+@keyframes animation__opacity
+  0%
+    opacity: 0
+  100%
+    opacity: 1
