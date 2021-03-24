@@ -1,0 +1,48 @@
+// Importation des fichiers
+@import 'styles/variables'
+
+// Le Sass de la page
+.container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: calc(100% - 45px * 2)
+  position: fixed
+  bottom: 45px
+  @media screen and ( max-width: 520px )
+    width: calc(100% - 20px * 2)
+    bottom: 20px
+
+  .all_projects__link
+    font-size: 1.8rem
+    font-weight: 500
+    font-family: $main-font
+    display: flex
+    justify-content: center
+    align-items: center
+    &::before
+      width: 0
+
+    svg
+      height: 1.2rem
+      margin-right: .5rem
+
+  .contact__logo
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and ( max-width: 850px )
+      flex-direction: column
+
+    a
+      &:first-child
+        margin-right: 1rem
+        @media screen and ( max-width: 850px )
+          margin-right: 0
+          margin-bottom: 1rem
+      &::before
+        width: 0
+
+      svg
+        height: 2.5rem
+        cursor: pointer

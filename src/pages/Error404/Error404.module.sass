@@ -1,0 +1,20 @@
+// Importation des fichiers
+@import 'styles/variables'
+
+// Le Sass de la page
+.container
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  text-align: center
+
+  h1
+    font-size: 7rem
+    font-weight: 300
+    font-family: $main-font
+    @media screen and ( max-width: 520px )
+      font-size: 5rem
+    @media screen and ( max-width: 360px )
+      font-size: 3.5rem

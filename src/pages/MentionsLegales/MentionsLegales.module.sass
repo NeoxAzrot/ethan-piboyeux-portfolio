@@ -1,0 +1,80 @@
+// Importation des fichiers
+@import 'styles/variables'
+@import 'styles/animations'
+
+// Les animations
+@mixin item-animation
+  @for $i from 1 through 10
+    &:nth-child(#{$i})
+      h2
+        &.animation__background
+          animation-delay: #{.5 + $i * .4}s
+          &::after
+            animation-delay: #{0 + $i * .4}s
+      .animation__transform_top
+        animation-delay: #{.1 + $i * .4}s
+
+.animation__background
+  position: relative
+  visibility: hidden
+  animation: display__background .0001s forwards
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background: $primary-color
+    visibility: visible
+    animation: animation__background .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+.animation__transform_top
+  opacity: 0
+  animation: animation__transform_top .8s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+// Le Sass de la page
+.container
+  margin: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 90%
+  margin-top: 10rem
+  margin-bottom: 4rem
+
+  .item
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    text-align: center
+    margin-bottom: 4rem
+    @include item-animation
+    @media screen and ( max-width: 520px )
+      margin-bottom: 3rem
+    h2
+      font-size: 2rem
+      font-weight: 500
+      font-family: $main-font
+      margin-bottom: 1rem
+      position: relative
+      display: inline-block
+      @media screen and ( max-width: 520px )
+        font-size: 1.8rem
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: .2rem
+        background: $primary-color
+
+    p
+      font-size: 1.6rem
+      font-weight: 500
+      font-family: $main-font
+      @media screen and ( max-width: 520px )
+        font-size: 1.5rem
