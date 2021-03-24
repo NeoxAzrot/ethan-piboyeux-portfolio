@@ -19,7 +19,7 @@ const Project1 = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Louis Pion</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." />
       </Helmet>
       
       <Header url='/louis-pion'/>
@@ -38,18 +38,18 @@ const Project1 = () => {
             <source src="images/louis-pion/louis-pion-ethan-piboyeux.mp4" type="video/mp4"/>
           </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg"/>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg"/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg"/>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg"/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
           </div>
         </div>
 
         <div className={styles.footer__project}>
           <div className={styles.animation__background}>
-            <LinkNextProject text="Projet suivant" link="/mode"/>
+            <LinkNextProject text="Mode" link="/mode"/>
           </div>
         </div>
       </div>

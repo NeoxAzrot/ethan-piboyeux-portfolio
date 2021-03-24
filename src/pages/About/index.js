@@ -22,7 +22,7 @@ const About = () => {
         {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
         <Helmet>
           <title>Ethan Piboyeux | À propos</title>
-          <meta name="description" content="Description" />
+          <meta name="description" content="Ethan est un jeune vidéaste, graphiste et photographe basé sur Bordeaux. Il est spécialisé dans la direction artistique et la réalisation. Sa vision artistique est influencé par le monde urbain et le monde du luxe." />
         </Helmet>
 
         <Header url='/à-propos'/>

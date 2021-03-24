@@ -20,7 +20,7 @@ const Project3 = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Youv Dee</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux." />
       </Helmet>
       
       <Header url='/youv-dee'/>
@@ -35,12 +35,12 @@ const Project3 = () => {
         />
 
         <div className={styles.images__container}>
-          <img className={styles.animation__transform_top} src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg"/>
+          <img className={styles.animation__transform_top} src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg" alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."/>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-2.jpg"/>
-            <img src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-3.jpg"/>
+            <img src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-2.jpg" alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."/>
+            <img src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-3.jpg"alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."/>
           </div>
-          <img className={styles.animation__transform_top} src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-4.jpg"/>
+          <img className={styles.animation__transform_top} src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-4.jpg" alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."/>
         </div>
 
         <div className={styles.footer__project}>
@@ -57,7 +57,7 @@ const Project3 = () => {
             ]}/>
 
             <div className={styles.animation__background}>
-              <LinkNextProject text="Projet suivant" link="/trieste"/>
+              <LinkNextProject text="Trieste" link="/trieste"/>
             </div>
           </div>
         </div>
