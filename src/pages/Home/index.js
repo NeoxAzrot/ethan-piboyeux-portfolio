@@ -25,7 +25,7 @@ const Home = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Portfolio</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Ethan est un jeune vidéaste, graphiste et photographe basé sur Bordeaux. Il est spécialisé dans la direction artistique et la réalisation. Sa vision artistique est influencé par le monde urbain et le monde du luxe." />
       </Helmet>
 
       <Header url='.'/>
@@ -37,35 +37,40 @@ const Home = () => {
               year: '2020',
               services: 'Production vidéo',
               link: 'louis-pion',
-              image: 'images/louis-pion/louis-pion-ethan-piboyeux.jpg'
+              image: 'images/louis-pion/louis-pion-ethan-piboyeux.jpg',
+              alt: 'Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux.'
             },
             {
               name: 'Mode',
               year: '2021',
               services: 'D.A, Design Graphique',
               link: 'mode',
-              image: 'images/mode/lycan-mode-ethan-piboyeux.jpg'
+              image: 'images/mode/lycan-mode-ethan-piboyeux.jpg',
+              alt: 'Design Graphique de la pochette (cover) du single "Mode" de l\'artiste Lycan, réalisé par Ethan Piboyeux.'
             },
             {
               name: 'Youv Dee',
               year: '2021',
               services: 'D.A, Design Graphique',
               link: 'youv-dee',
-              image: 'images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg'
+              image: 'images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg',
+              alt: 'Re-Design Graphique de la pochette d\'album (cover) \'La Vie De Luxe\' de l\'artiste Youv Dee, réalisé par Ethan Piboyeux.'
             },
             {
               name: 'Trieste',
               year: '2021',
               services: 'D.A, Design Graphique',
               link: 'trieste',
-              image: 'images/trieste/trieste-ethan-piboyeux.jpg'
+              image: 'images/trieste/trieste-ethan-piboyeux.jpg',
+              alt: 'Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek.'
             },
             {
               name: 'Kleidi',
               year: '2021',
               services: 'Chef de projet',
               link: 'kleidi',
-              image: 'images/kleidi/kleidi-ethan-piboyeux.jpg'
+              image: 'images/kleidi/kleidi-ethan-piboyeux.jpg',
+              alt: 'Kleidi est un dispositif visant à rendre accessible l\'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d\'impressions de plaques tactiles et d\'audioguides.'
             },
           ]
         }/>

@@ -18,7 +18,7 @@ const Contact = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Contact</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Contactez Ethan Piboyeux par mail." />
       </Helmet>
       
       <Header url='/contact'/>

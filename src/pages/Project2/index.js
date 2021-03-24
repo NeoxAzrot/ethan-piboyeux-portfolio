@@ -20,7 +20,7 @@ const Project2 = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Mode</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux." />
       </Helmet>
       
       <Header url='/mode'/>
@@ -35,12 +35,12 @@ const Project2 = () => {
         />
 
         <div className={styles.images__container}>
-          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-2.jpg"/>
+          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-2.jpg" alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux." />
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/mode/lycan-mode-ethan-piboyeux-3.jpg"/>
-            <img src="images/mode/lycan-mode-ethan-piboyeux-4.jpg"/>
+            <img src="images/mode/lycan-mode-ethan-piboyeux-3.jpg" alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux." />
+            <img src="images/mode/lycan-mode-ethan-piboyeux-4.jpg" alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux." />
           </div>
-          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-5.jpg"/>
+          <img className={styles.animation__transform_top} src="images/mode/lycan-mode-ethan-piboyeux-5.jpg" alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux." />
         </div>
 
         <div className={styles.footer__project}>
@@ -56,7 +56,7 @@ const Project2 = () => {
               }
             ]}/>
             <div className={styles.animation__background}>
-              <LinkNextProject text="Projet suivant" link="/youv-dee"/>
+              <LinkNextProject text="Youv Dee" link="/youv-dee"/>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const AllProjects = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Mes projets</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Retrouvez sur cette page différents projets de Ethan Piboyeux en vidéo, graphisme et photographie." />
       </Helmet>
 
       <Header url='/mes-projets'/>

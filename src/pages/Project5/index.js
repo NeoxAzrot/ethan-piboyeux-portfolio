@@ -20,7 +20,7 @@ const Project5 = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Kleidi</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides." />
       </Helmet>
       
       <Header url='/kleidi'/>
@@ -38,7 +38,7 @@ const Project5 = () => {
 
         <div className={styles.images__container}>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/kleidi/kleidi-ethan-piboyeux.jpg"/>
+            <img src="images/kleidi/kleidi-ethan-piboyeux.jpg" alt="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides."/>
             <video controls controlsList="nodownload" poster="images/kleidi/kleidi-ethan-piboyeux-miniature-1.jpg">
               <source src="images/kleidi/kleidi-plaque-ethan-piboyeux.mp4" type="video/mp4"/>
             </video>
@@ -101,7 +101,7 @@ const Project5 = () => {
               }
             ]}/>
             <div className={styles.animation__background}>
-              <LinkNextProject text="Projet suivant" link="/louis-pion"/>
+              <LinkNextProject text="Louis Pion" link="/louis-pion"/>
             </div>
           </div>
         </div>

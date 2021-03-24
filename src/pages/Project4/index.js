@@ -20,7 +20,7 @@ const Project4 = () => {
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
         <title>Ethan Piboyeux | Trieste</title>
-        <meta name="description" content="Description" />
+        <meta name="description" content="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." />
       </Helmet>
       
       <Header url='/trieste'/>
@@ -34,15 +34,15 @@ const Project4 = () => {
         services={['Direction artistique', 'Design graphique', 'Écriture de scénario']}
         />
 
-        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux.</p>
+        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek.</p>
 
         <div className={styles.images__container}>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-4.jpg"/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-7.jpg"/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-6.jpg"/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-5.jpg"/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-2.jpg"/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-3.jpg"/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-4.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-7.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-6.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-5.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-2.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-3.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
         </div>
 
         <div className={styles.footer__project}>
@@ -75,7 +75,7 @@ const Project4 = () => {
             ]}/>
 
             <div className={styles.animation__background}>
-              <LinkNextProject text="Projet suivant" link="/kleidi"/>
+              <LinkNextProject text="Kleidi" link="/kleidi"/>
             </div>
           </div>
         </div>
