@@ -1,5 +1,5 @@
 // Importation des fichiers
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project5.module.sass'
@@ -7,6 +7,7 @@ import Header from 'components/Header'
 import HeaderProject from 'components/HeaderProject'
 import LinkNextProject from 'components/LinkNextProject'
 import Credits from 'components/Credits'
+import ModalImage from 'components/ModalImage'
 
 const Project5 = () => {
 
@@ -14,6 +15,35 @@ const Project5 = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // Les variables pour le modal des images
+  const [imageModal, setImageModal] = useState()
+  const [altModal, setAltModal] = useState()
+  const [displayModal, setDisplayModal] = useState(false)
+
+  // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
+  const handleImage = (x) => {
+    setImageModal(x.target.src)
+    setAltModal(x.target.alt)
+    setDisplayModal(true)
+  }
+
+  // Fonction pour cacher l'image au clique
+  useEffect(() => {
+    // On désactive l'image si et seulement si l'image est déjà activé
+    const clickHandler = () => {
+      if(displayModal) {
+        setDisplayModal(false)
+      }
+    }
+
+    // On utilie un listener pour chaque clique
+    window.addEventListener("click", clickHandler, false)
+
+    return () => {
+      window.removeEventListener("click", clickHandler, false)
+    }
+  })
   
   return (
     <Layout>
@@ -22,6 +52,8 @@ const Project5 = () => {
         <title>Ethan Piboyeux | Kleidi</title>
         <meta name="description" content="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides." />
       </Helmet>
+
+      <ModalImage image={imageModal} alt={altModal} display={displayModal}/>
       
       <Header url='/kleidi'/>
       <div className={styles.container}>
@@ -38,7 +70,7 @@ const Project5 = () => {
 
         <div className={styles.images__container}>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/kleidi/kleidi-ethan-piboyeux.jpg" alt="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides."/>
+            <img src="images/kleidi/kleidi-ethan-piboyeux.jpg" alt="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides." onClick={handleImage} />
             <video controls controlsList="nodownload" poster="images/kleidi/kleidi-ethan-piboyeux-miniature-1.jpg">
               <source src="images/kleidi/kleidi-plaque-ethan-piboyeux.mp4" type="video/mp4"/>
             </video>

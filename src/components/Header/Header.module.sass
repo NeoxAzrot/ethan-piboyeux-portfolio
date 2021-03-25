@@ -8,7 +8,7 @@
   align-items: center
   width: calc(100% - 45px * 2)
   position: fixed
-  z-index: 9999
+  z-index: 999
   &::before
     // A cause du padding de layout, on rajoute le background du header de cette manière --> pas très propre mais plus simple
     content: ''
@@ -16,7 +16,7 @@
     top: -100rem
     left: -100rem
     width: calc(100rem + 200%) // Pour prendre toute la largeur en comptant le décalage à cause du padding
-    height: calc(100rem + 100% + 2rem) // Pour prendre toute la hauteur en comptant le décalage à cause du padding --> + 2rem pour le bas
+    height: calc(100rem + 100% + 1.5rem) // Pour prendre toute la hauteur en comptant le décalage à cause du padding --> + 2rem pour le bas
     background-color: $accent-color
   @media screen and ( max-width: 520px )
     width: calc(100% - 20px * 2)

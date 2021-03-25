@@ -23,7 +23,7 @@ const Contact = () => {
       
       <Header url='/contact'/>
       <div className={styles.container}>
-        <a href="mailto:contact@ethanpiboyeux.fr" className={`${styles.contact__link} ${styles.animation__background}`}>contact (@) ethanpiboyeux.fr</a>
+        <p className={`${styles.contact__link} ${styles.animation__background}`}>contact (@) ethanpiboyeux.fr</p>
       </div>
       <Footer allProjectsDisplay={false}/>
     </Layout>   

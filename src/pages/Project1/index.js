@@ -1,11 +1,12 @@
 // Importation des fichiers
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project1.module.sass'
 import Header from 'components/Header'
 import HeaderProject from 'components/HeaderProject'
 import LinkNextProject from 'components/LinkNextProject'
+import ModalImage from 'components/ModalImage'
 
 const Project1 = () => {
 
@@ -13,6 +14,36 @@ const Project1 = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // Les variables pour le modal des images
+  const [imageModal, setImageModal] = useState()
+  const [altModal, setAltModal] = useState()
+  const [displayModal, setDisplayModal] = useState(false)
+
+  // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
+  const handleImage = (x) => {
+    setImageModal(x.target.src)
+    setAltModal(x.target.alt)
+    setDisplayModal(true)
+    // Rajouter ici le truc pour display none en enlenvant le truce à false si 900px max width
+  }
+
+  // Fonction pour cacher l'image au clique
+  useEffect(() => {
+    // On désactive l'image si et seulement si l'image est déjà activé
+    const clickHandler = () => {
+      if(displayModal) {
+        setDisplayModal(false)
+      }
+    }
+
+    // On utilie un listener pour chaque clique
+    window.addEventListener("click", clickHandler, false)
+
+    return () => {
+      window.removeEventListener("click", clickHandler, false)
+    }
+  })
   
   return (
     <Layout>
@@ -21,6 +52,8 @@ const Project1 = () => {
         <title>Ethan Piboyeux | Louis Pion</title>
         <meta name="description" content="Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." />
       </Helmet>
+
+      <ModalImage image={imageModal} alt={altModal} display={displayModal}/>
       
       <Header url='/louis-pion'/>
       <div className={styles.container}>
@@ -38,12 +71,12 @@ const Project1 = () => {
             <source src="images/louis-pion/louis-pion-ethan-piboyeux.mp4" type="video/mp4"/>
           </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." onClick={handleImage} />
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." onClick={handleImage} />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
-            <img src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."/>
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." onClick={handleImage} />
+            <img src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg" alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux." onClick={handleImage} />
           </div>
         </div>
 

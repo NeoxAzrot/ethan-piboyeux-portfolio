@@ -1,0 +1,35 @@
+// Importation des fichiers
+@import 'styles/variables'
+@import 'styles/animations'
+
+// Les animations
+.animation__opacity
+  opacity: 0
+  animation: animation__opacity .4s ease forwards
+
+// Le Sass de la page
+.container
+  width: 100vw
+  height: 100vh
+  background: rgba($accent-color, .7)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  display: none
+  &.active
+    display: block
+  
+  @media screen and ( max-width: 900px )
+    display: none !important
+
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 70%
+    max-height: 70%
+    object-fit: contain   
+    border: .1rem rgba($primary-color, .5) solid
+    outline: none

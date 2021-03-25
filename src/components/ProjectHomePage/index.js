@@ -119,7 +119,7 @@ const ProjectHomePage = (props) => {
                     <p className={`${styles.project__year} ${styles.animation__transform_top_small}`}>{project.year}</p>
                   </div>
                   <span className={styles.container__image}>
-                    <img className={styles.animation__width} src={project.image} alt='Image du projet'/>
+                    <img className={styles.animation__width} src={project.image} alt={project.alt}/>
                   </span>
                 </div>
                 <div className={styles.right__container}>
