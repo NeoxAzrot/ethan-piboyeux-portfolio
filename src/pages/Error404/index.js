@@ -17,7 +17,7 @@ const Error404 = () => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Error 404</title>
+        <title>Ethan Piboyeux | Erreur 404</title>
         <meta name="description" content="Page d'erreur 404."/>
       </Helmet>
       

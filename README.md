@@ -33,7 +33,7 @@ Tu ne peux pas mettre ton site en ligne sur ton serveur comme ça. Tu dois faire
 Utilise cette commande à la racine du projet.
 
 ```bash
-npm build
+npm run build
 ```
 
 ### Mettre le site sur ton serveur

@@ -22,26 +22,50 @@ const Project1 = () => {
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
   const handleImage = (x) => {
-    setImageModal(x.target.src)
-    setAltModal(x.target.alt)
-    setDisplayModal(true)
-    // Rajouter ici le truc pour display none en enlenvant le truce à false si 900px max width
+    // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
+    if(window.innerWidth > 900) {
+      setImageModal(x.target.src)
+      setAltModal(x.target.alt)
+      setDisplayModal(true)
+    }
   }
 
-  // Fonction pour cacher l'image au clique
+  // Fonction pour cacher l'image au clique ou au scroll
   useEffect(() => {
     // On désactive l'image si et seulement si l'image est déjà activé
-    const clickHandler = () => {
+    const clickOrScrollHandler = () => {
       if(displayModal) {
         setDisplayModal(false)
       }
     }
 
     // On utilie un listener pour chaque clique
-    window.addEventListener("click", clickHandler, false)
+    window.addEventListener("click", clickOrScrollHandler, false)
+
+    // On utilie un listener en fonction du navigateur
+    if (window.addEventListener) {
+      // IE9, Chrome, Safari, Opera
+      window.addEventListener("mousewheel", clickOrScrollHandler, false)
+      // Firefox
+      window.addEventListener("DOMMouseScroll", clickOrScrollHandler, false)
+      // Mobile
+      window.addEventListener("touchmove", clickOrScrollHandler, false)
+      // IE 6~8
+    } else window.attachEvent("onmousewheel", clickOrScrollHandler)
 
     return () => {
-      window.removeEventListener("click", clickHandler, false)
+      window.removeEventListener("click", clickOrScrollHandler, false)
+
+      // On utilie un listener en fonction du navigateur
+      if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.removeEventListener("mousewheel", clickOrScrollHandler, false)
+        // Firefox
+        window.removeEventListener("DOMMouseScroll", clickOrScrollHandler, false)
+        // Mobile
+        window.removeEventListener("touchmove", clickOrScrollHandler, false)
+        // IE 6~8
+      } else window.detachEvent("onmousewheel", clickOrScrollHandler)
     }
   })
   
