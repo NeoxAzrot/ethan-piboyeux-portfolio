@@ -42,9 +42,9 @@ const Footer = (props) => {
         <a href="https://www.instagram.com/piboyeux.design/" target="_blank">
           <Instagram/>
         </a>
-        <a href="mailto:contact@ethanpiboyeux.fr" target="_blank">
+        <NavLink to='/contact'>
           <Mail/>
-        </a>
+        </NavLink>
       </div>
     </footer>
   )

@@ -1,5 +1,5 @@
 // Importation des fichiers
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from "react-helmet"
 import Layout from 'components/Layout'
 import styles from './Project4.module.sass'
@@ -7,6 +7,7 @@ import Header from 'components/Header'
 import HeaderProject from 'components/HeaderProject'
 import LinkNextProject from 'components/LinkNextProject'
 import Credits from 'components/Credits'
+import ModalImage from 'components/ModalImage'
 
 const Project4 = () => {
 
@@ -14,6 +15,35 @@ const Project4 = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // Les variables pour le modal des images
+  const [imageModal, setImageModal] = useState()
+  const [altModal, setAltModal] = useState()
+  const [displayModal, setDisplayModal] = useState(false)
+
+  // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
+  const handleImage = (x) => {
+    setImageModal(x.target.src)
+    setAltModal(x.target.alt)
+    setDisplayModal(true)
+  }
+
+  // Fonction pour cacher l'image au clique
+  useEffect(() => {
+    // On désactive l'image si et seulement si l'image est déjà activé
+    const clickHandler = () => {
+      if(displayModal) {
+        setDisplayModal(false)
+      }
+    }
+
+    // On utilie un listener pour chaque clique
+    window.addEventListener("click", clickHandler, false)
+
+    return () => {
+      window.removeEventListener("click", clickHandler, false)
+    }
+  })
   
   return (
     <Layout>
@@ -22,6 +52,8 @@ const Project4 = () => {
         <title>Ethan Piboyeux | Trieste</title>
         <meta name="description" content="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." />
       </Helmet>
+
+      <ModalImage image={imageModal} alt={altModal} display={displayModal}/>
       
       <Header url='/trieste'/>
       <div className={styles.container}>
@@ -37,12 +69,18 @@ const Project4 = () => {
         <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek.</p>
 
         <div className={styles.images__container}>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-4.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-7.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-6.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-5.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-2.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
-          <img className={styles.animation__transform_top} src="images/trieste/trieste-ethan-piboyeux-3.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."/>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img src="images/trieste/trieste-ethan-piboyeux-4.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+            <img src="images/trieste/trieste-ethan-piboyeux-7.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img src="images/trieste/trieste-ethan-piboyeux-6.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+            <img src="images/trieste/trieste-ethan-piboyeux-5.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img src="images/trieste/trieste-ethan-piboyeux-2.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+            <img src="images/trieste/trieste-ethan-piboyeux-3.jpg" alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek." onClick={handleImage} />
+          </div>
         </div>
 
         <div className={styles.footer__project}>
