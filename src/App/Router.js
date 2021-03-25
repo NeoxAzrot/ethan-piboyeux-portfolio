@@ -1,6 +1,6 @@
 // Importation des fichiers
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from 'pages/Home'
 import About from 'pages/About'
 import AllProjects from 'pages/AllProjects'
@@ -62,11 +62,15 @@ const Router = () => {
           <MentionsLegales />
         </Route>
 
+        <Route exact path="/error-404">
+          <Error404 />
+        </Route>
+
         <Route exact path="/">
           <Home />
         </Route>
 
-        <Route exact path="*">
+        <Route>
           <Error404 />
         </Route>
 

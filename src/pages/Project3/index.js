@@ -23,9 +23,12 @@ const Project3 = () => {
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
   const handleImage = (x) => {
-    setImageModal(x.target.src)
-    setAltModal(x.target.alt)
-    setDisplayModal(true)
+    // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
+    if(window.innerWidth > 900) {
+      setImageModal(x.target.src)
+      setAltModal(x.target.alt)
+      setDisplayModal(true)
+    }
   }
 
   // Fonction pour cacher l'image au clique
