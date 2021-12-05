@@ -25,7 +25,7 @@
     left: 50%
     transform: translate(-50%, -50%)
     width: 75%
-    max-height: calc(100vh - 20rem)
+    max-height: calc(100vh - 24rem)
 
   .footer
     display: flex
@@ -34,6 +34,11 @@
     width: calc(100% - 45px * 2)
     position: fixed
     bottom: 45px
+
+    .desktop_only
+      @media screen and ( max-width: 670px )
+        display: none
+
     @media screen and ( max-width: 520px )
       width: calc(100% - 20px * 2)
       bottom: 20px

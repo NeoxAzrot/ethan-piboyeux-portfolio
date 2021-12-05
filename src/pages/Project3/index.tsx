@@ -20,11 +20,12 @@ const Project3 = (): JSX.Element => {
   const [displayModal, setDisplayModal] = useState<boolean>(false);
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
-  const handleImage = (x: Event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleImage = (e: any) => {
     // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
     if (window.innerWidth > 900) {
-      setImageModal((x.target as HTMLImageElement).src);
-      setAltModal((x.target as HTMLImageElement).alt);
+      setImageModal((e.target as HTMLImageElement).src);
+      setAltModal((e.target as HTMLImageElement).alt);
       setDisplayModal(true);
     }
   };
@@ -91,25 +92,25 @@ const Project3 = (): JSX.Element => {
             className={styles.animation__transform_top}
             src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg"
             alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
-            onClick={() => handleImage}
+            onClick={handleImage}
           />
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-2.jpg"
               alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <img
               src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-3.jpg"
               alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
           </div>
           <img
             className={styles.animation__transform_top}
             src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-4.jpg"
             alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
-            onClick={() => handleImage}
+            onClick={handleImage}
           />
         </div>
 

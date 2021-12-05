@@ -20,15 +20,15 @@ const Project4 = (): JSX.Element => {
   const [displayModal, setDisplayModal] = useState<boolean>(false);
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
-  const handleImage = (x: Event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleImage = (e: any) => {
     // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
     if (window.innerWidth > 900) {
-      setImageModal((x.target as HTMLImageElement).src);
-      setAltModal((x.target as HTMLImageElement).alt);
+      setImageModal((e.target as HTMLImageElement).src);
+      setAltModal((e.target as HTMLImageElement).alt);
       setDisplayModal(true);
     }
   };
-
   // Fonction pour cacher l'image au clique ou au scroll
   useEffect(() => {
     // On désactive l'image si et seulement si l'image est déjà activé
@@ -96,36 +96,36 @@ const Project4 = (): JSX.Element => {
             <img
               src="images/trieste/trieste-ethan-piboyeux-4.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <img
               src="images/trieste/trieste-ethan-piboyeux-7.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/trieste/trieste-ethan-piboyeux-6.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <img
               src="images/trieste/trieste-ethan-piboyeux-5.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/trieste/trieste-ethan-piboyeux-2.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <img
               src="images/trieste/trieste-ethan-piboyeux-3.jpg"
               alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
           </div>
         </div>

@@ -43,9 +43,9 @@ const CreativeCV = (): JSX.Element => {
     const stickersArray: StickersPositionType[] = [];
     for (let i = 0; i < NUMBER_OF_STICKERS; i++) {
       stickersArray.push({
-        top: getRandomInt(5, MAX_TOP_PERCENT),
+        top: getRandomInt(0, MAX_TOP_PERCENT),
         left: getRandomInt(0, MAX_LEFT_PERCENT),
-        zIndex: 1,
+        zIndex: 50,
         isDragging: false,
         transformTop: 0,
         transformLeft: 0,
@@ -73,9 +73,9 @@ const CreativeCV = (): JSX.Element => {
     const stickersArray = [...stickers];
     // On update le z-index de tous à 1 et de ce sticker à 2
     stickersArray.map((sticker) => {
-      sticker.zIndex = 1;
+      sticker.zIndex = 50;
     });
-    stickersArray[index].zIndex = 2;
+    stickersArray[index].zIndex = 51;
 
     stickersArray[index].isDragging = true;
     stickersArray[index].cursor = 'grabbing';
@@ -161,6 +161,7 @@ const CreativeCV = (): JSX.Element => {
         ))}
 
         <div className={styles.button}>
+          <p className={styles.mobile}>Les stickers sont indisponibles sur mobile.</p>
           <Button url="/creative-cv-2">Page 2</Button>
         </div>
       </div>

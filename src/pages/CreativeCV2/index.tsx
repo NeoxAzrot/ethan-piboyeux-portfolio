@@ -38,9 +38,10 @@ const CreativeCV2 = (): JSX.Element => {
         <img src="images/stickers/stickers-illustration.svg" className={styles.poster} />
         <div className={styles.footer}>
           <Button url="/creative-cv">Page 1</Button>
-          <div onClick={downloadFile}>
+          <div className={styles.desktop_only} onClick={downloadFile}>
             <Button>Ai file</Button>
           </div>
+          <Button url="/">Home</Button>
         </div>
       </div>
     </Layout>

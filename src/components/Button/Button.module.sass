@@ -3,23 +3,25 @@
 
 .container
   text-transform: uppercase
-  font-size: 2.4rem
+  font-size: 2.2rem
   font-weight: 700
   font-family: $main-font
   color: $primary-color
   cursor: pointer
   border: .2rem solid $primary-color
   border-radius: 1rem
-  padding: 1rem 4rem
+  padding: 1.5rem 6rem
   background-color: transparent
-  transition: background .4s ease, color .4s ease
+  transition: background .4s ease, color .4s ease, transform .4s ease
+  display: inline-block
   &::before
     display: none
 
   &:hover
     background-color: $primary-color
     color: $accent-color
+    transform: scale(1.05)
 
   @media screen and ( max-width: 520px )
-    font-size: 2rem
-    padding: 1rem 2rem
+    font-size: 1.8rem
+    padding: 1rem 4rem
