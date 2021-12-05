@@ -20,11 +20,12 @@ const Project5 = (): JSX.Element => {
   const [displayModal, setDisplayModal] = useState<boolean>(false);
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
-  const handleImage = (x: Event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleImage = (e: any) => {
     // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
     if (window.innerWidth > 900) {
-      setImageModal((x.target as HTMLImageElement).src);
-      setAltModal((x.target as HTMLImageElement).alt);
+      setImageModal((e.target as HTMLImageElement).src);
+      setAltModal((e.target as HTMLImageElement).alt);
       setDisplayModal(true);
     }
   };
@@ -97,7 +98,7 @@ const Project5 = (): JSX.Element => {
             <img
               src="images/kleidi/kleidi-ethan-piboyeux.jpg"
               alt="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <video
               controls

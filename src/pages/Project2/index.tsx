@@ -20,11 +20,12 @@ const Project2 = (): JSX.Element => {
   const [displayModal, setDisplayModal] = useState<boolean>(false);
 
   // Fonction pour changer l'image en fonction de l'image sur laquelle on clique
-  const handleImage = (x: Event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleImage = (e: any) => {
     // On affiche le modal uniquement si l'écran est supérieur à 900px --> quand on est en row
     if (window.innerWidth > 900) {
-      setImageModal((x.target as HTMLImageElement).src);
-      setAltModal((x.target as HTMLImageElement).alt);
+      setImageModal((e.target as HTMLImageElement).src);
+      setAltModal((e.target as HTMLImageElement).alt);
       setDisplayModal(true);
     }
   };
@@ -91,25 +92,25 @@ const Project2 = (): JSX.Element => {
             className={styles.animation__transform_top}
             src="images/mode/lycan-mode-ethan-piboyeux-2.jpg"
             alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-            onClick={() => handleImage}
+            onClick={handleImage}
           />
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/mode/lycan-mode-ethan-piboyeux-3.jpg"
               alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
             <img
               src="images/mode/lycan-mode-ethan-piboyeux-4.jpg"
               alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-              onClick={() => handleImage}
+              onClick={handleImage}
             />
           </div>
           <img
             className={styles.animation__transform_top}
             src="images/mode/lycan-mode-ethan-piboyeux-5.jpg"
             alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-            onClick={() => handleImage}
+            onClick={handleImage}
           />
         </div>
 
