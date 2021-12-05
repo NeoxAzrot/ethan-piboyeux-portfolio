@@ -1,0 +1,39 @@
+// Importation des fichiers
+@import 'styles/variables'
+
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .mention
+    position: fixed
+    top: 50%
+    left: -35px * 2
+    transform: rotate(-90deg)
+    color: $primary-color
+    font-size: 1.8rem
+    font-weight: 500
+    font-family: $main-font
+    @media screen and ( max-width: 520px )
+      font-size: 1.6rem
+      left: -40px * 2
+
+  .poster
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 75%
+    max-height: calc(100vh - 20rem)
+
+  .footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: calc(100% - 45px * 2)
+    position: fixed
+    bottom: 45px
+    @media screen and ( max-width: 520px )
+      width: calc(100% - 20px * 2)
+      bottom: 20px

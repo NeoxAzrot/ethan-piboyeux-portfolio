@@ -1,0 +1,45 @@
+@import 'styles/reset'
+@import 'styles/fonts'
+@import 'styles/variables'
+@import 'styles/animations'
+
+// Le Sass pour toutes les pages
+html
+  overflow-x: hidden
+
+body
+  background: $accent-color
+  min-width: calc(100vw - 45px * 2)
+  min-height: calc(100vh - 25px * 2)
+  font-family: $main-font
+  font-size: 1.6rem
+  overflow-x: hidden
+  color: $primary-color
+  @media screen and ( max-width: 520px )
+    min-height: calc(100vh - 20px * 2)
+    min-width: calc(100vw - 20px * 2)
+
+a
+  color: $primary-color
+  text-decoration: none
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: .2rem
+    background: $primary-color
+    transition: width .5s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    &::before
+      width: 0
+
+img
+  user-select: none
+
+// Pour changer la sélection des éléments
+*::selection
+  background: $primary-color
+  color: $accent-color
