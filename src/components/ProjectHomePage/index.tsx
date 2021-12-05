@@ -111,7 +111,7 @@ const ProjectHomePage = (props: PropsType): JSX.Element => {
                   <span>
                     <div className={styles.animation__width}></div>
                   </span>
-                  <p className={styles.animation__transform_top_small}>{'0' + index + 1}</p>
+                  <p className={styles.animation__transform_top_small}>{'0' + (index + 1)}</p>
                 </div>
               </div>
               <div className={styles.item__container}>
