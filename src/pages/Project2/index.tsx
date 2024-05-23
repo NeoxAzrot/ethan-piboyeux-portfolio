@@ -100,48 +100,48 @@ const Project2 = (): JSX.Element => {
           </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-1.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
-              onClick={handleImage}
-            />
-            <img
               src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-2.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
-          </div>
-          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-3.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-4.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
-          </div>
-          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-5.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
               src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-6.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-7.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-7.jpg"
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-8.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-8.jpg"
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-9.jpg"
               alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />

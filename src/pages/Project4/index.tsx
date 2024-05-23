@@ -28,7 +28,6 @@ const Project4 = (): JSX.Element => {
       setDisplayModal(true);
     }
   };
-
   // Fonction pour cacher l'image au clique ou au scroll
   useEffect(() => {
     // On désactive l'image si et seulement si l'image est déjà activé
