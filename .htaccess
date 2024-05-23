@@ -1,0 +1,20 @@
+# Pour aller sur un URL directement
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Redirige le HTTP vers le HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R]
+
+# Force le www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^ethanpiboyeux.fr [NC]
+RewriteCond %{REQUEST_URI} !
+RewriteRule ^(.*)$ https://www.ethanpiboyeux.fr/$1 [L,R=301,NC]
+
+# Redirige les erreurs vers la page 404
+# ErrorDocument 404 /error-404
