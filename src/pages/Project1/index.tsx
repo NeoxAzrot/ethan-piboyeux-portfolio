@@ -97,24 +97,24 @@ const Project1 = (): JSX.Element => {
           </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/the-punisher/the-punisher-ethan-piboyeux-1.jpg"
+              src="images/the-punisher/the-punisher-ethan-piboyeux-2.jpg"
               alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/the-punisher/the-punisher-ethan-piboyeux-2.jpg"
+              src="images/the-punisher/the-punisher-ethan-piboyeux-3.jpg"
               alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/the-punisher/the-punisher-ethan-piboyeux-3.jpg"
+              src="images/the-punisher/the-punisher-ethan-piboyeux-4.jpg"
               alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/the-punisher/the-punisher-ethan-piboyeux-4.jpg"
+              src="images/the-punisher/the-punisher-ethan-piboyeux-5.jpg"
               alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />

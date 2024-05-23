@@ -90,25 +90,25 @@ const Project7 = (): JSX.Element => {
         <div className={styles.images__container}>
           <img
             className={styles.animation__transform_top}
-            src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-1.jpg"
+            src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-2.jpg"
             alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
             onClick={handleImage}
           />
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-2.jpg"
+              src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-3.jpg"
               alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-3.jpg"
+              src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-4.jpg"
               alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <img
             className={styles.animation__transform_top}
-            src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-4.jpg"
+            src="images/youv-dee/you-dee-la-vie-de-luxe-ethan-piboyeux-5.jpg"
             alt="Re-Design Graphique de la pochette d'album (cover) 'La Vie De Luxe' de l'artiste Youv Dee, réalisé par Ethan Piboyeux."
             onClick={handleImage}
           />

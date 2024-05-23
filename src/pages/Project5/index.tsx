@@ -89,24 +89,24 @@ const Project5 = (): JSX.Element => {
         <div className={styles.images__container}>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/une-vie/une-vie-eta-ethan-piboyeux-1.jpg"
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-2.jpg"
               alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/une-vie/une-vie-eta-ethan-piboyeux-2.jpg"
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-3.jpg"
               alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/une-vie/une-vie-eta-ethan-piboyeux-3.jpg"
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-4.jpg"
               alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/une-vie/une-vie-eta-ethan-piboyeux-4.jpg"
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-5.jpg"
               alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
