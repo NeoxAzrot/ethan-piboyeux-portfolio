@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Layout from 'components/Layout';
-import styles from './Project1.module.sass';
 import Header from 'components/Header';
 import HeaderProject from 'components/HeaderProject';
+import Layout from 'components/Layout';
 import LinkNextProject from 'components/LinkNextProject';
 import ModalImage from 'components/ModalImage';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import styles from './Project1.module.sass';
 
 const Project1 = (): JSX.Element => {
   // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
@@ -66,24 +66,24 @@ const Project1 = (): JSX.Element => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Louis Pion</title>
+        <title>Ethan Piboyeux | The Punisher (Generique)</title>
         <meta
           name="description"
-          content="Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
+          content="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
         />
       </Helmet>
 
       <ModalImage image={imageModal} alt={altModal} display={displayModal} />
 
-      <Header url="/louis-pion" />
+      <Header url="/the-punisher" />
       <div className={styles.container}>
         <HeaderProject
-          title="Louis Pion"
+          title="The Punisher"
           index={1}
-          titleLink="Voir la vidéo"
-          link="https://youtu.be/MK6FZHSqu68"
-          year={2021}
-          services={['Direction artistique', 'Production vidéo', 'Montage vidéo']}
+          titleLink="Découvrir la série"
+          link="https://fr.wikipedia.org/wiki/The_Punisher_(s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e)"
+          year={2022}
+          services={['Réalisation Vidéo', 'Direction artistique', 'Montage Vidéo']}
         />
 
         <div className={styles.images__container}>
@@ -91,31 +91,31 @@ const Project1 = (): JSX.Element => {
             className={styles.animation__transform_top}
             controls
             controlsList="nodownload"
-            poster="images/louis-pion/louis-pion-ethan-piboyeux-miniature.jpg"
+            poster="images/the-punisher/the-punisher-ethan-piboyeux-miniature.jpg"
           >
-            <source src="images/louis-pion/louis-pion-ethan-piboyeux.mp4" type="video/mp4" />
+            <source src="images/the-punisher/the-punisher-ethan-piboyeux.mp4" type="video/mp4" />
           </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg"
-              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
+              src="images/the-punisher/the-punisher-ethan-piboyeux-1.jpg"
+              alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg"
-              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
+              src="images/the-punisher/the-punisher-ethan-piboyeux-2.jpg"
+              alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg"
-              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
+              src="images/the-punisher/the-punisher-ethan-piboyeux-3.jpg"
+              alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg"
-              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
+              src="images/the-punisher/the-punisher-ethan-piboyeux-4.jpg"
+              alt="Remake du générique de la série Marvel « The Punisher », réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
@@ -123,7 +123,7 @@ const Project1 = (): JSX.Element => {
 
         <div className={styles.footer__project}>
           <div className={styles.animation__background}>
-            <LinkNextProject text="Une Vie" link="/une-vie" />
+            <LinkNextProject text="Ortole" link="/ortole-designer-packshot" />
           </div>
         </div>
       </div>

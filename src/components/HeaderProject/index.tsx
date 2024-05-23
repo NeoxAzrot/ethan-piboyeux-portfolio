@@ -1,5 +1,5 @@
-import styles from './HeaderProject.module.sass';
 import ArrowProjectLink from 'icons/ArrowProjectLink';
+import styles from './HeaderProject.module.sass';
 
 type PropsType = {
   title: string;
@@ -20,7 +20,7 @@ const HeaderProject = (props: PropsType): JSX.Element => {
         <div className={`${styles.number_of_projects} ${styles.animation__transform_left_rotate}`}>
           <p className={styles.animation__transform_left}>{index}</p>
           <span></span>
-          <p className={styles.animation__transform_right}>5</p>
+          <p className={styles.animation__transform_right}>9</p>
         </div>
         <h1 className={styles.animation__background}>{title}</h1>
       </div>

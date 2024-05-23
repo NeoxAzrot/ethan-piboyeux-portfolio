@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Layout from 'components/Layout';
-import styles from './Project8.module.sass';
+import Credits from 'components/Credits';
 import Header from 'components/Header';
 import HeaderProject from 'components/HeaderProject';
+import Layout from 'components/Layout';
 import LinkNextProject from 'components/LinkNextProject';
 import ModalImage from 'components/ModalImage';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import styles from './Project8.module.sass';
 
 const Project8 = (): JSX.Element => {
   // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
@@ -28,7 +29,6 @@ const Project8 = (): JSX.Element => {
       setDisplayModal(true);
     }
   };
-
   // Fonction pour cacher l'image au clique ou au scroll
   useEffect(() => {
     // On désactive l'image si et seulement si l'image est déjà activé
@@ -66,88 +66,104 @@ const Project8 = (): JSX.Element => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Ortolé Designer (Packshot)</title>
+        <title>Ethan Piboyeux | Trieste</title>
         <meta
           name="description"
-          content="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+          content="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
         />
       </Helmet>
 
       <ModalImage image={imageModal} alt={altModal} display={displayModal} />
 
-      <Header url="/ortole-designer-packshot" />
+      <Header url="/trieste" />
       <div className={styles.container}>
         <HeaderProject
-          title="ortole"
-          index={1}
-          titleLink="Découvrir la marque"
-          link="https://ortole.com/"
+          title="Trieste"
+          index={8}
+          titleLink="Essayer le jeu"
+          link="https://trieste.netlify.app/"
           year={2021}
-          services={['Direction artistique', 'Shooting Photo & Vidéo']}
+          services={['Direction artistique', 'Design graphique', 'Écriture de scénario']}
         />
 
+        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>
+          Trieste est un projet de site interactif et artistique en collaboration avec le musée des
+          Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek.
+        </p>
+
         <div className={styles.images__container}>
-          <video
-            className={styles.animation__transform_top}
-            controls
-            controlsList="nodownload"
-            poster="images/ortole-packshot/ortole-packshot-ethan-piboyeux-miniature.jpg"
-          >
-            <source src="images/ortole-packshot/ortole-packshot.mp4" type="video/mp4" />
-          </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-01.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-4.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-02.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-7.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-03.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-6.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-04.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
-              onClick={handleImage}
-            />
-          </div>
-          <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-05.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
-              onClick={handleImage}
-            />
-            <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-06.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-5.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-07.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-2.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
             <img
-              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-08.jpg"
-              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              src="images/trieste/trieste-ethan-piboyeux-3.jpg"
+              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
               onClick={handleImage}
             />
           </div>
         </div>
 
         <div className={styles.footer__project}>
-          <div className={styles.animation__background}>
-            <LinkNextProject text="9 MILLI" link="/9-milli" />
+          <div>
+            <Credits
+              credits={[
+                {
+                  name: 'Enzo Arnaudet',
+                  role: 'Motion design, Écriture',
+                },
+                {
+                  name: 'Mathieu Delepine',
+                  role: 'Écriture, Motion design',
+                },
+                {
+                  name: 'Tristan Guillemot',
+                  role: 'Écriture, Motion design',
+                },
+                {
+                  name: 'Sami Lafrance',
+                  role: 'Développeur interactif',
+                },
+                {
+                  name: 'Marc Lacault',
+                  role: 'Sound design, Musiques',
+                },
+                {
+                  name: 'Beaux-Arts, Bordeaux',
+                  role: 'Collaborateur',
+                },
+              ]}
+            />
+
+            <div className={styles.animation__background}>
+              <LinkNextProject text="Kleidi" link="/kleidi" />
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styles from './Menu.module.sass';
 import { NavLink } from 'react-router-dom';
+import styles from './Menu.module.sass';
 
 const Menu = (): JSX.Element => {
   // Pour afficher le menu quand on clique
@@ -19,11 +19,11 @@ const Menu = (): JSX.Element => {
         }`}
       >
         <ul>
-          {/* <li>
-            <NavLink to="/all-projects" className={styles.menu__link}>
+          <li>
+            <NavLink to="/the-punisher" className={styles.menu__link}>
               mes projets
             </NavLink>
-          </li> */}
+          </li>
           <li>
             <NavLink to="/services" className={styles.menu__link}>
               mes services
@@ -49,11 +49,11 @@ const Menu = (): JSX.Element => {
         }`}
       >
         <ul>
-          {/* <li>
-            <NavLink to="/all-projects" className={styles.menu__link}>
+          <li>
+            <NavLink to="/the-punisher" className={styles.menu__link}>
               mes projets
             </NavLink>
-          </li> */}
+          </li>
           <li>
             <NavLink to="/services" className={styles.menu__link}>
               mes services

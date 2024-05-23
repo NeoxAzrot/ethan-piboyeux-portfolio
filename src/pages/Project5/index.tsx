@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Layout from 'components/Layout';
-import styles from './Project5.module.sass';
 import Header from 'components/Header';
 import HeaderProject from 'components/HeaderProject';
+import Layout from 'components/Layout';
 import LinkNextProject from 'components/LinkNextProject';
-import Credits from 'components/Credits';
 import ModalImage from 'components/ModalImage';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import styles from './Project5.module.sass';
 
 const Project5 = (): JSX.Element => {
   // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
@@ -67,114 +66,56 @@ const Project5 = (): JSX.Element => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Kleidi</title>
+        <title>Ethan Piboyeux | Une Vie</title>
         <meta
           name="description"
-          content="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides."
+          content="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
         />
       </Helmet>
 
       <ModalImage image={imageModal} alt={altModal} display={displayModal} />
 
-      <Header url="/kleidi" />
+      <Header url="/une-vie" />
       <div className={styles.container}>
         <HeaderProject
-          title="Kleidi"
+          title="Une Vie"
           index={5}
-          titleLink="Voir le site"
-          link="https://kleidi.org/"
+          titleLink="Écouter l'album"
+          link="https://open.spotify.com/artist/4hLEWmW8SCJYxZkWfSJakZ"
           year={2021}
-          services={['Chef de projet']}
+          services={['Direction artistique', 'Design graphique']}
         />
-
-        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>
-          Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de
-          handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais
-          d'impressions de plaques tactiles et d'audioguides.
-        </p>
 
         <div className={styles.images__container}>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/kleidi/kleidi-ethan-piboyeux.jpg"
-              alt="Kleidi est un dispositif visant à rendre accessible l'art aux personnes en situation de handicap visuel à travers une expérience innovante, sensorielle et auditive via le biais d'impressions de plaques tactiles et d'audioguides."
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-1.jpg"
+              alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
-            <video
-              controls
-              controlsList="nodownload"
-              poster="images/kleidi/kleidi-ethan-piboyeux-miniature-1.jpg"
-            >
-              <source src="images/kleidi/kleidi-plaque-ethan-piboyeux.mp4" type="video/mp4" />
-            </video>
+            <img
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-2.jpg"
+              alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
           </div>
-          <video
-            className={styles.animation__transform_top}
-            controls
-            controlsList="nodownload"
-            poster="images/kleidi/kleidi-ethan-piboyeux-miniature-2.jpg"
-          >
-            <source src="images/kleidi/kleidi-inauguration-ethan-piboyeux.mp4" type="video/mp4" />
-          </video>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-3.jpg"
+              alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+            <img
+              src="images/une-vie/une-vie-eta-ethan-piboyeux-4.jpg"
+              alt="Design Graphique de la pochette (cover) de l'album « Une Vie » de l'artiste Eta, réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+          </div>
         </div>
 
         <div className={styles.footer__project}>
-          <div>
-            <Credits
-              credits={[
-                {
-                  name: 'Enzo Arnaudet',
-                  role: 'Développeur web',
-                },
-                {
-                  name: 'Mathieu Delepine',
-                  role: 'Développeur web, Rédaction, 3D',
-                },
-                {
-                  name: 'Tristan Guillemot',
-                  role: 'Communication',
-                },
-                {
-                  name: 'Mael Aurensan',
-                  role: 'Communication, Presse, Partenaires',
-                },
-                {
-                  name: 'Marc Lacault',
-                  role: 'Rédaction, Sound design',
-                },
-                {
-                  name: 'Théo Saminadin',
-                  role: 'Communication, Presse',
-                },
-                {
-                  name: 'Nathaël Labat',
-                  role: 'Community manager, Sound design',
-                },
-                {
-                  name: 'Gaëtan Jestin',
-                  role: '3D, Rédaction',
-                },
-                {
-                  name: 'Mahela Pellot',
-                  role: 'Voix off, Presse',
-                },
-                {
-                  name: 'Julian Laballe',
-                  role: 'Sound design',
-                },
-                {
-                  name: "Musée d'Aquitaine",
-                  role: 'Partenaire',
-                },
-                {
-                  name: 'Bordeaux',
-                  role: 'Partenaire',
-                },
-              ]}
-            />
-            <div className={styles.animation__background}>
-              <LinkNextProject text="ORTOLE" link="/ortole-designer-packshot" />
-            </div>
+          <div className={styles.animation__background}>
+            <LinkNextProject text="Mode" link="/mode" />
           </div>
         </div>
       </div>

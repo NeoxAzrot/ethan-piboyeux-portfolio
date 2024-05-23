@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Layout from 'components/Layout';
-import styles from './Project2.module.sass';
 import Header from 'components/Header';
 import HeaderProject from 'components/HeaderProject';
+import Layout from 'components/Layout';
 import LinkNextProject from 'components/LinkNextProject';
-import Credits from 'components/Credits';
 import ModalImage from 'components/ModalImage';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import styles from './Project2.module.sass';
 
 const Project2 = (): JSX.Element => {
   // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
@@ -67,70 +66,91 @@ const Project2 = (): JSX.Element => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Mode</title>
+        <title>Ethan Piboyeux | Ortolé Designer (Packshot)</title>
         <meta
           name="description"
-          content="Design Graphique de la pochette (cover) du single « Mode » de l'artiste Lycan, réalisé par Ethan Piboyeux."
+          content="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
         />
       </Helmet>
 
       <ModalImage image={imageModal} alt={altModal} display={displayModal} />
 
-      <Header url="/mode" />
+      <Header url="/ortole-designer-packshot" />
       <div className={styles.container}>
         <HeaderProject
-          title="Mode"
+          title="Ortole"
           index={2}
-          titleLink="Écouter le single"
-          link="https://open.spotify.com/track/3Cdho3oYoyHUKLvd06s2Uw?si=8144267fd9914bac"
+          titleLink="Découvrir la marque"
+          link="https://ortole.com/"
           year={2021}
-          services={['Direction artistique', 'Design graphique']}
+          services={['Direction artistique', 'Shooting Photo & Vidéo']}
         />
 
         <div className={styles.images__container}>
-          <img
+          <video
             className={styles.animation__transform_top}
-            src="images/mode/lycan-mode-ethan-piboyeux-2.jpg"
-            alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-            onClick={handleImage}
-          />
+            controls
+            controlsList="nodownload"
+            poster="images/ortole-packshot/ortole-packshot-ethan-piboyeux-miniature.jpg"
+          >
+            <source
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux.mp4"
+              type="video/mp4"
+            />
+          </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/mode/lycan-mode-ethan-piboyeux-3.jpg"
-              alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-1.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/mode/lycan-mode-ethan-piboyeux-4.jpg"
-              alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-2.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
-          <img
-            className={styles.animation__transform_top}
-            src="images/mode/lycan-mode-ethan-piboyeux-5.jpg"
-            alt="Design Graphique de la pochette (cover) du single 'Mode' de l'artiste Lycan, réalisé par Ethan Piboyeux."
-            onClick={handleImage}
-          />
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-3.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-4.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-5.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-6.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+          </div>
+          <div className={`${styles.row} ${styles.animation__transform_top}`}>
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-7.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+            <img
+              src="images/ortole-packshot/ortole-packshot-ethan-piboyeux-8.jpg"
+              alt="Direction artistique, shooting packshot photo et vidéo pour la mise en avant de collection de lunettes pour Ortolé Designer (Tropical Optic Shop), réalisé par Ethan Piboyeux."
+              onClick={handleImage}
+            />
+          </div>
         </div>
 
         <div className={styles.footer__project}>
-          <div>
-            <Credits
-              credits={[
-                {
-                  name: 'François Grenier',
-                  role: 'Peintre',
-                },
-                {
-                  name: 'Antony Lycan',
-                  role: 'Artiste',
-                },
-              ]}
-            />
-            <div className={styles.animation__background}>
-              <LinkNextProject text="Youv Dee" link="/youv-dee" />
-            </div>
+          <div className={styles.animation__background}>
+            <LinkNextProject text="9 MILLI" link="/9-milli" />
           </div>
         </div>
       </div>

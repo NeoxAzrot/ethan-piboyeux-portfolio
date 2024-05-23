@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Layout from 'components/Layout';
-import styles from './Project4.module.sass';
 import Header from 'components/Header';
 import HeaderProject from 'components/HeaderProject';
+import Layout from 'components/Layout';
 import LinkNextProject from 'components/LinkNextProject';
-import Credits from 'components/Credits';
 import ModalImage from 'components/ModalImage';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import styles from './Project4.module.sass';
 
 const Project4 = (): JSX.Element => {
   // Fonction pour être en haut de la page quand on arrive sur une page --> merci React.js
@@ -29,6 +28,7 @@ const Project4 = (): JSX.Element => {
       setDisplayModal(true);
     }
   };
+
   // Fonction pour cacher l'image au clique ou au scroll
   useEffect(() => {
     // On désactive l'image si et seulement si l'image est déjà activé
@@ -66,104 +66,64 @@ const Project4 = (): JSX.Element => {
     <Layout>
       {/* Pour le SEO on utilise Helmet, on peut y rajouter tout les tags du Head que l'on veut pour cette page spécifiquement */}
       <Helmet>
-        <title>Ethan Piboyeux | Trieste</title>
+        <title>Ethan Piboyeux | Louis Pion</title>
         <meta
           name="description"
-          content="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
+          content="Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
         />
       </Helmet>
 
       <ModalImage image={imageModal} alt={altModal} display={displayModal} />
 
-      <Header url="/trieste" />
+      <Header url="/louis-pion" />
       <div className={styles.container}>
         <HeaderProject
-          title="Trieste"
+          title="Louis Pion"
           index={4}
-          titleLink="Essayer le jeu"
-          link="https://trieste.netlify.app/"
+          titleLink="Voir la vidéo"
+          link="https://youtu.be/MK6FZHSqu68"
           year={2021}
-          services={['Direction artistique', 'Design graphique', 'Écriture de scénario']}
+          services={['Direction artistique', 'Production vidéo', 'Montage vidéo']}
         />
 
-        <p className={`${styles.text__introduction} ${styles.animation__transform_top}`}>
-          Trieste est un projet de site interactif et artistique en collaboration avec le musée des
-          Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek.
-        </p>
-
         <div className={styles.images__container}>
+          <video
+            className={styles.animation__transform_top}
+            controls
+            controlsList="nodownload"
+            poster="images/louis-pion/louis-pion-ethan-piboyeux-miniature.jpg"
+          >
+            <source src="images/louis-pion/louis-pion-ethan-piboyeux.mp4" type="video/mp4" />
+          </video>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/trieste/trieste-ethan-piboyeux-4.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
+              src="images/louis-pion/louis-pion-ethan-piboyeux-2.jpg"
+              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/trieste/trieste-ethan-piboyeux-7.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
+              src="images/louis-pion/louis-pion-ethan-piboyeux-3.jpg"
+              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
           <div className={`${styles.row} ${styles.animation__transform_top}`}>
             <img
-              src="images/trieste/trieste-ethan-piboyeux-6.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
+              src="images/louis-pion/louis-pion-ethan-piboyeux-4.jpg"
+              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
             <img
-              src="images/trieste/trieste-ethan-piboyeux-5.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={handleImage}
-            />
-          </div>
-          <div className={`${styles.row} ${styles.animation__transform_top}`}>
-            <img
-              src="images/trieste/trieste-ethan-piboyeux-2.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
-              onClick={handleImage}
-            />
-            <img
-              src="images/trieste/trieste-ethan-piboyeux-3.jpg"
-              alt="Trieste est un projet de site interactif et artistique en collaboration avec le musée des Beaux-Arts de Bordeaux dans le cadre de la Bacchaweek."
+              src="images/louis-pion/louis-pion-ethan-piboyeux-5.jpg"
+              alt=" Vidéo de présentation de produit de la Montre ACHILLE XK1491IN2-15 de louis pion, réalisé par Ethan Piboyeux."
               onClick={handleImage}
             />
           </div>
         </div>
 
         <div className={styles.footer__project}>
-          <div>
-            <Credits
-              credits={[
-                {
-                  name: 'Enzo Arnaudet',
-                  role: 'Motion design, Écriture',
-                },
-                {
-                  name: 'Mathieu Delepine',
-                  role: 'Écriture, Motion design',
-                },
-                {
-                  name: 'Tristan Guillemot',
-                  role: 'Écriture, Motion design',
-                },
-                {
-                  name: 'Sami Lafrance',
-                  role: 'Développeur interactif',
-                },
-                {
-                  name: 'Marc Lacault',
-                  role: 'Sound design, Musiques',
-                },
-                {
-                  name: 'Beaux-Arts, Bordeaux',
-                  role: 'Collaborateur',
-                },
-              ]}
-            />
-
-            <div className={styles.animation__background}>
-              <LinkNextProject text="Kleidi" link="/kleidi" />
-            </div>
+          <div className={styles.animation__background}>
+            <LinkNextProject text="Une Vie" link="/une-vie" />
           </div>
         </div>
       </div>
