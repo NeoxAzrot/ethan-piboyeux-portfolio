@@ -42,6 +42,14 @@ const Home = (): JSX.Element => {
       <Header url="." />
       <div className={styles.wrapper}>
         <div className={styles.container}>
+          {showAlert ? (
+            <div className={styles.alert__container}>
+              <div className={styles.alert__wrapper}>
+                <p className={styles.alert}>Email copié</p>
+              </div>
+            </div>
+          ) : null}
+
           <img src="images/seizo/ethan.jpeg" alt="Ethan Piboyeux" className={styles.image} />
 
           <div
@@ -53,14 +61,6 @@ const Home = (): JSX.Element => {
             <div className={styles.header__wrapper}>
               <div className={styles.header}>
                 <div className={styles.email__container} onClick={copyToClipboard}>
-                  {showAlert ? (
-                    <div className={styles.alert__container}>
-                      <div className={styles.alert__wrapper}>
-                        <p className={styles.alert}>Email copié</p>
-                      </div>
-                    </div>
-                  ) : null}
-
                   <div className={styles.email__wrapper}>
                     <p className={styles.email__name}>ethan</p>
 

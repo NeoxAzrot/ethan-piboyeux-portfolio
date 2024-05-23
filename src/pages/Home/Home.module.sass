@@ -18,11 +18,31 @@
     position: relative
     width: 100%
     height: 100%
+    .alert__container
+      position: absolute
+      bottom: 1.6rem
+      left: 50%
+      z-index: 1
+      transform: translate(-50%, -100%)
+      .alert__wrapper
+        animation: animation__transform_top_small .8s cubic-bezier(0.4, 0, 0.2, 1)
+        .alert
+          padding: 0.8rem 1.2rem
+          background: $light-green
+          color: $accent-color
+          font-size: 1.6rem
+          font-weight: 400
+          font-family: $secondary-font
+          border-radius: 0.8rem
+          box-shadow: 0 0 1.6rem rgba(0, 0, 0, .2)
     .image
       object-fit: cover
       border: solid 2px $primary-color
       border-radius: 0.8rem
       flex: 1
+      width: 33.33%
+      @media screen and ( max-width: 1000px )
+        display: none
     .content__wrapper
       display: flex
       flex-direction: column
@@ -34,6 +54,10 @@
       background-position: bottom left
       background-size: cover
       padding: 3.6rem 4.8rem
+      @media screen and ( max-width: 700px )
+        padding: 2.4rem 3.2rem
+      @media screen and ( max-width: 520px )
+        padding: 1.6rem 2.4rem
       .header__wrapper
         flex: 1
         .header
@@ -44,24 +68,6 @@
             flex-direction: column
             user-select: none
             cursor: pointer
-            position: relative
-            .alert__container
-              position: absolute
-              top: -1.6rem
-              left: 50%
-              z-index: 1
-              transform: translate(-50%, -100%)
-              .alert__wrapper
-                animation: animation__transform_top_small .8s cubic-bezier(0.4, 0, 0.2, 1)
-                .alert
-                  padding: 0.8rem 1.2rem
-                  background: $light-green
-                  color: $accent-color
-                  font-size: 1.6rem
-                  font-weight: 400
-                  font-family: $secondary-font
-                  border-radius: 0.8rem
-                  box-shadow: 0 0 1.6rem rgba(0, 0, 0, .2)
             .email__wrapper
               display: flex
               align-items: center
@@ -70,8 +76,14 @@
                 font-weight: 700
                 font-family: $secondary-font
                 color: $light-green
+                @media screen and ( max-width: 580px )
+                  font-size: 2.4rem
               .email__at
                 position: relative
+                @media screen and ( max-width: 580px )
+                  svg
+                    width: 2.4rem
+                    height: auto
                 .email__at__hover
                   position: absolute
                   top: 50%
@@ -84,6 +96,10 @@
                       transition: stroke-dashoffset .8s cubic-bezier(0.4, 0, 0.2, 1)
             .line__wrapper
               svg
+                width: 30rem
+                height: auto
+                @media screen and ( max-width: 580px )
+                  width: 22rem
                 path
                   stroke-dasharray: 1000
                   stroke-dashoffset: 1000
@@ -101,6 +117,8 @@
 
           .logo
             height: 3.8rem
+            @media screen and ( max-width: 700px )
+              display: none
             &::before
               content: none
             img
@@ -114,10 +132,14 @@
           font-weight: 700
           font-family: $secondary-font
           margin-bottom: 2rem
+          @media screen and ( max-width: 580px )
+            font-size: 4.8rem
         p
           font-size: 3.2rem
           font-weight: 400
           font-family: $secondary-font
+          @media screen and ( max-width: 580px )
+            font-size: 2.4rem
         .link__wrapper
           margin-top: 3.2rem
           display: inline-flex
@@ -127,6 +149,10 @@
             content: none
           .arrow__wrapper
             transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1)
+            @media screen and ( max-width: 580px )
+              svg
+                width: 2.4rem
+                height: auto
           .link__container
             display: flex
             flex-direction: column
@@ -135,8 +161,14 @@
               font-weight: 700
               font-family: $secondary-font
               color: $light-green
+              @media screen and ( max-width: 580px )
+                font-size: 2.4rem
             .line__wrapper
               svg
+                width: 26rem
+                height: auto
+                @media screen and ( max-width: 580px )
+                  width: 19.5rem
                 path
                   stroke-dasharray: 1000
                   stroke-dashoffset: 1000
@@ -156,3 +188,7 @@
       width: 25%
       height: auto
       opacity: 50%
+      @media screen and ( max-width: 700px )
+        width: 35%
+      @media screen and ( max-width: 580px )
+        width: 50%
