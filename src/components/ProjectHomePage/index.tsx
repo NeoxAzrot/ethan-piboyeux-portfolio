@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import styles from './ProjectHomePage.module.sass';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './ProjectHomePage.module.sass';
 
 type PropsType = {
   projects: ProjectType[];
@@ -42,6 +42,7 @@ const ProjectHomePage = (props: PropsType): JSX.Element => {
     // Fonction qui retourne 1 si on scroll en haut et -1 si on scroll en bas
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mouseWheelHandler = (e: any) => {
+      return; // TODO: remove this if we remove the modal
       // On exécute la fonction que si on n'est pas en train d'afficher un projet
       if (!isScrolling) {
         e = window.event || e;
@@ -57,6 +58,7 @@ const ProjectHomePage = (props: PropsType): JSX.Element => {
     let scrollYTouchMove: number[] = [];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const touchMoveHandler = (e: any) => {
+      return; // TODO: remove this if we remove the modal
       if (!isScrolling) {
         e = window.event || e;
         scrollYTouchMove.push(e.touches[0].screenY);
