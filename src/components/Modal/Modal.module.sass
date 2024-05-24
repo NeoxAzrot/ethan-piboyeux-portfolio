@@ -9,8 +9,8 @@
 
 // Le Sass de la page
 .container
-  width: 100vw
-  height: 100vh
+  width: 100dvw
+  height: 100dvh
   background: rgba($accent-color, .7)
   position: fixed
   top: 0
@@ -41,6 +41,8 @@
     transform: translate(-50%, -50%)
     width: 80%
     height: 70%
+    @media screen and ( max-width: 580px )
+      height: 80%
     .inner
       display: flex
       gap: 1.6rem
@@ -68,7 +70,7 @@
         padding: 3.6rem 4.8rem
         @media screen and ( max-width: 700px )
           padding: 2.4rem 3.2rem
-        @media screen and ( max-width: 520px )
+        @media screen and ( max-width: 580px )
           padding: 1.6rem 2.4rem
         .header__wrapper
           flex: 1

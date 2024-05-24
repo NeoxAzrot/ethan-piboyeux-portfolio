@@ -10,13 +10,14 @@ html
 body
   background: $accent-color
   min-width: calc(100vw - 45px * 2)
-  min-height: calc(100vh - 25px * 2)
+  // min-height: calc(100vh - 25px * 2) // TODO: remove this if we remove the modal
+  max-height: 100dvh // TODO: remove this if we remove the modal
   font-family: $main-font
   font-size: 1.6rem
   overflow-x: hidden
   color: $primary-color
   @media screen and ( max-width: 520px )
-    min-height: calc(100vh - 20px * 2)
+    // min-height: calc(100vh - 20px * 2) // TODO: remove this if we remove the modal
     min-width: calc(100vw - 20px * 2)
 
 a
