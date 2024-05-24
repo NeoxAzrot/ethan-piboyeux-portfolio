@@ -1,5 +1,4 @@
 import About from 'pages/About';
-import AllProjects from 'pages/AllProjects';
 import Contact from 'pages/Contact';
 import CreativeCV from 'pages/CreativeCV';
 import CreativeCV2 from 'pages/CreativeCV2';
@@ -25,8 +24,6 @@ const Router = (): JSX.Element => {
         <Route path="/" element={<Home />} />
 
         <Route path="/about" element={<About />} />
-
-        <Route path="/all-projects" element={<AllProjects />} />
 
         <Route path="/contact" element={<Contact />} />
 

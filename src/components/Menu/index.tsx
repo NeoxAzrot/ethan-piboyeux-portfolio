@@ -20,11 +20,6 @@ const Menu = (): JSX.Element => {
       >
         <ul>
           <li>
-            <NavLink to="/the-punisher" className={styles.menu__link}>
-              mes projets
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/services" className={styles.menu__link}>
               mes services
             </NavLink>
@@ -49,11 +44,6 @@ const Menu = (): JSX.Element => {
         }`}
       >
         <ul>
-          <li>
-            <NavLink to="/the-punisher" className={styles.menu__link}>
-              mes projets
-            </NavLink>
-          </li>
           <li>
             <NavLink to="/services" className={styles.menu__link}>
               mes services
