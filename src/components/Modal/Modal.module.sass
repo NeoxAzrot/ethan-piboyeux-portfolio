@@ -18,10 +18,14 @@
   z-index: 30
   .alert__container
     position: absolute
-    top: 3.2rem
+    top: 4rem
     left: 50%
     z-index: 1
     transform: translate(-50%, 100%)
+    @media screen and ( max-width: 580px )
+      top: auto
+      bottom: 0.8rem
+      transform: translate(-50%, -100%)
     .alert__wrapper
       animation: animation__transform_top_small .8s cubic-bezier(0.4, 0, 0.2, 1)
       .alert
